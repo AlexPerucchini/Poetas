@@ -1,4 +1,4 @@
-== Poetas application == 
+Poetas application  
 
 Rails application will act as a community website for poetry, and short stories. A user will be able to upload, follow and unfollow other users (Twitter Style), viewed stats (like/dislike) It will also have a forum for disucssion.
 
