@@ -45,7 +45,7 @@ gem "email_spec", ">= 1.2.1", :group => :test
 gem "database_cleaner", ">= 0.8.0", :group => :test
 gem "launchy", ">= 2.1.2", :group => :test
 gem "factory_girl_rails", ">= 4.0.0", :group => [:development, :test]
-gem "bootstrap-sass", ">= 2.1.0.0"
+gem "bootstrap-sass", "2.0.4"
 gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
