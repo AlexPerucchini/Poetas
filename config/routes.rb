@@ -1,6 +1,9 @@
 Poetas::Application.routes.draw do
 
   devise_for :users
+  authenticated :users do
+    root to: "home#index"
+  end
 
   root to: "home#index"
 

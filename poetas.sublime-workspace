@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"be",
+				"be_valid"
+			],
+			[
+				"pass",
+				"password_confirmation"
+			],
+			[
 				"hs",
 				"has_many"
 			],
 			[
 				"followed",
 				"followed_users"
-			],
-			[
-				"be",
-				"be_following"
 			],
 			[
 				"foll",
@@ -110,10 +114,6 @@
 			[
 				"ren",
 				"render"
-			],
-			[
-				"pass",
-				"password"
 			],
 			[
 				"bef",
@@ -411,6 +411,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "spec/models/user_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1015,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 574,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -476,6 +492,7 @@
 	},
 	"file_history":
 	[
+		"/Users/alexp/Documents/code/rails/poetas/db/migrate/20120930145554_devise_create_users.rb",
 		"/Users/alexp/Documents/code/rails/poetas/public/robots.txt",
 		"/Users/alexp/Documents/code/rails/poetas/config/routes.rb",
 		"/Users/alexp/Documents/code/rails/poetas/config/application.rb",
@@ -602,8 +619,7 @@
 		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex17.rb",
 		"/Users/alexp/Documents/code/ruby/ruby_hard_way/input.txt",
 		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex14.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex13.rb",
-		"/Users/alexp/Documents/code/ruby/learn_ruby/01_temperature/temperature_spec.rb"
+		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex13.rb"
 	],
 	"find":
 	{
@@ -621,6 +637,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"      :",
 			"following",
 			"micropost",
 			"pagination",
@@ -666,6 +683,62 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "spec/models/user_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1015,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1002,
+								1002
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								569,
+								569
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -913,10 +986,10 @@
 		],
 		"width": 0.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 232.0,
+	"side_bar_width": 138.0,
 	"status_bar_visible": true
 }
