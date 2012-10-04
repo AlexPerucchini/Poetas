@@ -1,11 +1,20 @@
 Poetas::Application.routes.draw do
-
+  
   devise_for :users
+
   authenticated :users do
-    root to: "home#index"
+    root to: "static_pages#home"
   end
 
-  root to: "home#index"
+  root to: "static_pages#home"
+  match '/contact', to: 'static_pages#contact'
+  match '/about',   to: 'static_pages#about'
+
+  devise_scope :user do
+    match '/signup', to: 'devise/registrations#new'
+    match '/signin', to: 'devise/sessions#new'
+    match '/logout', to: 'devise/sessions#destroy' 
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

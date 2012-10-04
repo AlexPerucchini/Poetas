@@ -412,18 +412,26 @@
 	"buffers":
 	[
 		{
-			"file": "spec/models/user_spec.rb",
+			"file": "app/assets/javascripts/application.js",
 			"settings":
 			{
-				"buffer_size": 1015,
+				"buffer_size": 641,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/user.rb",
+			"file": "app/assets/stylesheets/custom.css.scss",
 			"settings":
 			{
-				"buffer_size": 574,
+				"buffer_size": 239,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1347,
 				"line_ending": "Unix"
 			}
 		}
@@ -492,17 +500,25 @@
 	},
 	"file_history":
 	[
+		"/Users/alexp/Documents/code/rails/poetas/config/routes.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/application.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/custom.css.scss",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/home/index.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/helpers/home_helper.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/application.css",
+		"/Users/alexp/Documents/code/rails/poetas/app/models/user.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/models/user_spec.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/registrations/edit.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/registrations/new.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/Gemfile",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/javascripts/application.js",
 		"/Users/alexp/Documents/code/rails/poetas/db/migrate/20120930145554_devise_create_users.rb",
 		"/Users/alexp/Documents/code/rails/poetas/public/robots.txt",
-		"/Users/alexp/Documents/code/rails/poetas/config/routes.rb",
 		"/Users/alexp/Documents/code/rails/poetas/config/application.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/models/ability.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/controllers/application_controller.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/models/user.rb",
 		"/Users/alexp/Documents/code/rails/poetas/README",
 		"/Users/alexp/Documents/code/rails/poetas/README.rdoc",
-		"/Users/alexp/Documents/code/rails/poetas/Gemfile",
-		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/application.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/config/initializers/devise.rb",
 		"/Users/alexp/Documents/code/rails/sample_app/app/views/users/_follow.thml.erb",
 		"/Users/alexp/Documents/code/rails/sample_app/config/routes.rb",
@@ -611,15 +627,7 @@
 		"/Users/alexp/Documents/code/ruby/sass/1_6.rb",
 		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex16.rb",
 		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex26.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex25_b.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex25.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex24.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex21.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex20.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex17.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/input.txt",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex14.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex13.rb"
+		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex25_b.rb"
 	],
 	"find":
 	{
@@ -681,29 +689,28 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "spec/models/user_spec.rb",
+					"file": "app/assets/javascripts/application.js",
 					"settings":
 					{
-						"buffer_size": 1015,
+						"buffer_size": 641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1002,
-								1002
+								621,
+								621
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/User/RSpec.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -713,28 +720,52 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/models/user.rb",
+					"file": "app/assets/stylesheets/custom.css.scss",
 					"settings":
 					{
-						"buffer_size": 574,
+						"buffer_size": 239,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								569,
-								569
+								22,
+								22
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1205,
+								1205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -788,16 +819,20 @@
 		"selected_items":
 		[
 			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
 				"rou",
 				"config/routes.rb"
 			],
 			[
 				"ro",
 				"public/robots.txt"
-			],
-			[
-				"route",
-				"config/routes.rb"
 			],
 			[
 				"routes",
@@ -916,10 +951,6 @@
 				"app/views/static_pages/home.html.erb"
 			],
 			[
-				"ge",
-				"Gemfile"
-			],
-			[
 				"usercon",
 				"app/controllers/users_controller.rb"
 			],
@@ -990,6 +1021,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 138.0,
+	"side_bar_width": 250.0,
 	"status_bar_visible": true
 }
