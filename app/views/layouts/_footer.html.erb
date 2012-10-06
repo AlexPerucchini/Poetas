@@ -1,6 +1,9 @@
 <footer class="footer">
   <small>
-    Ali3nLabs &copy; 2012, all rights reserved 
+    <% if user_signed_in? %>
+    Signed in as <%= current_user.name %>. Not you? <%= link_to("Logout", logout_path) %> <br />   
+   <% end %>
+   Ali3nLabs &copy; 2012, all rights reserved 
   </small>
   <nav>
     <ul>

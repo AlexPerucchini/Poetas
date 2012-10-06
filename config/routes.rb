@@ -2,11 +2,8 @@ Poetas::Application.routes.draw do
   
   devise_for :users
 
-  authenticated :users do
-    root to: "static_pages#home"
-  end
-
   root to: "static_pages#home"
+  
   match '/contact', to: 'static_pages#contact'
   match '/about',   to: 'static_pages#about'
 
