@@ -1,0 +1,14 @@
+<% provide(:title, 'Profile') %>
+<h1>User Profile</h1>
+<div class="row">
+  <div class="span6  offset3">
+    <ul>
+      <li><b>Name:</b> <%= current_user.name %> </li>
+      <li><b>Email:</b> <%= current_user.email %> </li>
+      <li><b>Account created on:</b> <%= current_user.created_at %> </li>
+      <li><b>Account updated at:</b> <%= current_user.updated_at %> </li>
+      <li><b>Account last sign in at:</b> <%= current_user.last_sign_in_at %> </li>
+      <li><b>Account last sign in ip:</b> <%= current_user.current_sign_in_ip %> </li>
+    </ul>
+  </div>
+</div>

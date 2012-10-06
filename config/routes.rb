@@ -6,6 +6,7 @@ Poetas::Application.routes.draw do
   
   match '/contact', to: 'static_pages#contact'
   match '/about',   to: 'static_pages#about'
+  match '/profile', to: 'static_pages#profile'
 
   devise_scope :user do
     match '/signup', to: 'devise/registrations#new'
