@@ -11,6 +11,6 @@ class User < ActiveRecord::Base
                    :remember_me
   # attr_accessible :title, :body
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 50}
   validates :email, presence: true
 end
