@@ -27,6 +27,7 @@ group :development, :test do
   gem "factory_girl_rails", ">= 4.0.0"
   gem "hub", ">= 1.10.2"
   gem "launchy", ">= 2.1.2"
+  gem "faker", "1.0.1"
 end
 
 

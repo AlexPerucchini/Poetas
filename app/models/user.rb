@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
                    :remember_me
   # attr_accessible :title, :body
 
-  has_many :poems
-  
+  has_many :poems, dependent: :destroy
+
   validates :name, presence: true, length: { maximum: 50}
   validates :email, presence: true
 end

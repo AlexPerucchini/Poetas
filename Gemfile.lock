@@ -68,6 +68,8 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
+    faker (1.0.1)
+      i18n (~> 0.4)
     ffi (1.1.5)
     hike (1.2.1)
     hub (1.10.2)
@@ -171,6 +173,7 @@ DEPENDENCIES
   devise (>= 2.1.2)
   email_spec (>= 1.2.1)
   factory_girl_rails (>= 4.0.0)
+  faker (= 1.0.1)
   hub (>= 1.10.2)
   jquery-rails
   launchy (>= 2.1.2)

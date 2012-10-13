@@ -10,6 +10,8 @@ describe Poem do
 
   it { should respond_to(:body) }
   it { should respond_to(:user_id) }
+  it { should respond_to(:user) }
+  its(:user) { should == user}
 
   it { should be_valid}
 
@@ -24,5 +26,15 @@ describe Poem do
         Poem.new(user_id: user.id)
       end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
     end    
+  end
+
+  describe "with blank title" do
+    before { @poem.title = " " }
+    it { should_not be_valid }
+  end
+
+  describe "with blank body" do
+    before { @poem.body = " " }
+    it { should_not be_valid }
   end
 end

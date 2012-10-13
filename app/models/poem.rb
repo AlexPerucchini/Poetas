@@ -4,4 +4,6 @@ class Poem < ActiveRecord::Base
   belongs_to :user
 
   validates :body, :title, :user_id, presence: true
+
+  default_scope order: 'poems.created_at DESC'
 end
