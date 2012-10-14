@@ -1,2 +1,12 @@
-<h1>Poems#show</h1>
-<p>Find me in app/views/poems/show.html.erb</p>
+<% provide(:title,@poem.title ) %>
+<span class="title"><%= @poem.title %></span> <br><br>
+<div class="row .poems">
+  <div class="span8">
+    <span class="body"><%= @poem.body %></span>
+    <span class="timestamp">
+     Created by <%= @poem.user.name %>, <%= time_ago_in_words(@poem.created_at) %> ago.
+    </span>
+     <span class="links"> <%= link_to('My Poems', poems_path) %></span>
+  </div>
+</div>
+

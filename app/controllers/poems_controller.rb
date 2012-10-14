@@ -11,6 +11,7 @@ class PoemsController < ApplicationController
   end
 
   def show
+    @poem = Poem.find(params[:id])
   end
 
   def create

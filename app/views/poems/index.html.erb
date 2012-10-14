@@ -1,7 +1,7 @@
 <% provide(:title, @user.name) %>
 <h1>Poems by <%= @user.name %></h1>
 <div class="row">
-  <div class="span12">
+  <div class="span8">
     <% if @user.poems.any? %>
       <h3>Poems (<%= @user.poems.count %>)</h3>
       <ol class="poems">
