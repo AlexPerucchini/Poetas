@@ -1,5 +1,7 @@
 Poetas::Application.routes.draw do
   
+  resources :poems
+
   devise_for :users
 
   root to: "static_pages#home"

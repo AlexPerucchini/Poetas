@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"sho",
+				"should_not"
+			],
+			[
+				"shou",
+				"should"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"fi",
+				"fill_in"
+			],
+			[
 				"fon",
 				"font-size"
 			],
@@ -60,10 +88,6 @@
 				"micropost"
 			],
 			[
-				"user",
-				"user_path"
-			],
-			[
 				"non",
 				"non_admin"
 			],
@@ -104,10 +128,6 @@
 				"margin-right"
 			],
 			[
-				"mar",
-				"margin-bottom"
-			],
-			[
 				"pa",
 				"padding-top"
 			],
@@ -126,10 +146,6 @@
 			[
 				"re",
 				"req	require \"..\""
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"te",
@@ -166,10 +182,6 @@
 			[
 				"bro",
 				"border-box"
-			],
-			[
-				"fi",
-				"figcaption"
 			],
 			[
 				"in",
@@ -411,54 +423,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/layouts/_footer.html.erb",
-			"settings":
-			{
-				"buffer_size": 386,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/static_pages_controller.rb",
-			"settings":
-			{
-				"buffer_size": 207,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/static_pages/profile.html.erb",
-			"settings":
-			{
-				"buffer_size": 568,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 2169,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layouts/_header.html.erb",
-			"settings":
-			{
-				"buffer_size": 887,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/devise/registrations/edit.html.erb",
-			"settings":
-			{
-				"buffer_size": 1108,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -524,32 +488,49 @@
 	},
 	"file_history":
 	[
-		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/registrations/edit.html.erb",
-		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/_header.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/requests/authentication_pages_spec.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/factories/factories.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/support/utilities.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/index.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/_poem.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/custom.css.scss",
+		"/Users/alexp/Documents/code/rails/poetas/spec/requests/poems_pages_spec.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/utilities.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/controllers/poems_controller.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/controllers/static_pages_controller.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/static_pages/profile.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/config/routes.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/requests/poems_pages_spec.rspec",
+		"/Users/alexp/Documents/code/rails/poetas/db/seeds.rb",
+		"/Users/alexp/Documents/code/rails/poetas/Gemfile",
+		"/Users/alexp/Documents/code/rails/poetas/lib/tasks/sample_data.rake",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/_header.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/controllers/application_controller.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/models/user_spec.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/models/poem_spec.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/models/poem.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/requests/static_pages_spec.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/requests/user_pages_spec.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/models/user.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/sessions/new.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/db/migrate/20121011135601_create_poems.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/factories/users.rb",
+		"/Users/alexp/Documents/code/rails/poetas/spec/factories/poems.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/_footer.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/registrations/edit.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/static_pages/home.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/controllers/registrations.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/custom.css.scss",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/application.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/assets/javascripts/application.js",
-		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/_footer.html.erb",
-		"/Users/alexp/Documents/code/rails/poetas/app/controllers/application_controller.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/controllers/static_pages_controller.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/shared/_links.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/shared/_loginfo.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/shared/_errors.html.erb",
-		"/Users/alexp/Documents/code/rails/poetas/db/seeds.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/_errors.hmtl.erb",
-		"/Users/alexp/Documents/code/rails/poetas/Gemfile",
 		"/Users/alexp/Documents/code/rails/poetas/db/migrate/20120930145554_devise_create_users.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/models/user.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/sessions/new.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/registrations/new.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/static_pages/about.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/static_pages/contact.html.erb",
-		"/Users/alexp/Documents/code/rails/poetas/spec/requests/static_pages_spec.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/helpers/static_pages_helper.rb",
-		"/Users/alexp/Documents/code/rails/poetas/spec/models/user_spec.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/layouts/_shim.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/helpers/application_helper.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/controllers/home_controller.rb",
@@ -634,24 +615,7 @@
 		"/Users/alexp/Documents/code/html/1.html",
 		"/Users/alexp/Documents/code/rails/example/example_test.rb",
 		"/Users/alexp/Documents/code/rails/example/bacon_test.rb",
-		"/Users/alexp/Documents/code/rails/things_i_bought/app/views/purchases/show.html.erb",
-		"/Users/alexp/Documents/code/rails/things_i_bought/app/models/purchase.rb",
-		"/Users/alexp/Documents/code/rails/depot/app/views/products/show.html.erb",
-		"/Users/alexp/Documents/code/rails/depot/app/views/products/index.html.erb",
-		"/Users/alexp/Documents/code/rails/depot/app/views/layouts/application.html.erb",
-		"/Users/alexp/Documents/code/rails/depot/app/assets/stylesheets/products.css.scss",
-		"/Users/alexp/Documents/code/rails/depot/db/seeds.rb",
-		"/Users/alexp/Documents/code/rails/depot/db/migrate/20120620112525_create_products.rb",
-		"/Users/alexp/Documents/code/rails/depot/test/unit/product_test.rb",
-		"/Users/alexp/Documents/code/ruby/learn_ruby/04_simon_says/ex32.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex35.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex35,r",
-		"/Users/alexp/Documents/code/ruby/sass/hero.rb",
-		"/Users/alexp/Documents/code/ruby/learn_ruby/00_hello/index.html",
-		"/Users/alexp/Documents/code/ruby/learn_ruby/00_hello/hello_spec.rb",
-		"/Users/alexp/Documents/code/ruby/learn_ruby/00_hello/hello.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex31.rb",
-		"/Users/alexp/Documents/code/ruby/ruby_hard_way/ex30.rb"
+		"/Users/alexp/Documents/code/rails/things_i_bought/app/views/purchases/show.html.erb"
 	],
 	"find":
 	{
@@ -669,6 +633,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}\n",
+			"user",
+			"micropost",
+			"poem",
 			"      :",
 			"following",
 			"micropost",
@@ -700,6 +668,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"poem",
 			"array_2",
 			"array_1",
 			"title"
@@ -713,173 +682,8 @@
 	"groups":
 	[
 		{
-			"selected": 5,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/layouts/_footer.html.erb",
-					"settings":
-					{
-						"buffer_size": 386,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								131,
-								131
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/static_pages_controller.rb",
-					"settings":
-					{
-						"buffer_size": 207,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								195,
-								195
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/static_pages/profile.html.erb",
-					"settings":
-					{
-						"buffer_size": 568,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								522,
-								522
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "config/routes.rb",
-					"settings":
-					{
-						"buffer_size": 2169,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								230,
-								230
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/layouts/_header.html.erb",
-					"settings":
-					{
-						"buffer_size": 887,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								559,
-								559
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/devise/registrations/edit.html.erb",
-					"settings":
-					{
-						"buffer_size": 1108,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								764,
-								764
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -929,8 +733,28 @@
 		"selected_items":
 		[
 			[
+				"_poe",
+				"app/views/poems/_poem.html.erb"
+			],
+			[
+				"cust",
+				"app/assets/stylesheets/custom.css.scss"
+			],
+			[
 				"route",
 				"config/routes.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"fact",
+				"spec/factories/factories.rb"
+			],
+			[
+				"userspec",
+				"spec/models/user_spec.rb"
 			],
 			[
 				"routes",
@@ -939,10 +763,6 @@
 			[
 				"a",
 				"app/controllers/application_controller.rb"
-			],
-			[
-				"gem",
-				"Gemfile"
 			],
 			[
 				"rout",
@@ -985,10 +805,6 @@
 				"app/controllers/users_controller.rb"
 			],
 			[
-				"cust",
-				"app/assets/stylesheets/custom.css.scss"
-			],
-			[
 				"sig",
 				"app/views/static_pages/_user_signed_in.html.erb"
 			],
@@ -1003,10 +819,6 @@
 			[
 				"rake",
 				"lib/tasks/sample_data.rake"
-			],
-			[
-				"userspec",
-				"spec/models/user_spec.rb"
 			],
 			[
 				"relat",
@@ -1147,6 +959,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 251.0,
+	"side_bar_width": 215.0,
 	"status_bar_visible": true
 }

@@ -1,0 +1,10 @@
+<li>
+  <span class="title"><%= poem.title %></span>
+  <span class="body"><%= truncate(poem.body, length: 400) %></span>
+  <span class="timestamp">
+    Created <%= time_ago_in_words(poem.created_at) %> ago.
+  </span>
+  <span class="links">
+    <%= link_to('Show', '#') %> | <%= link_to('Delete', '#') %>
+  </span>
+</li>
