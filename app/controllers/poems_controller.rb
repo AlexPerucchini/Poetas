@@ -15,7 +15,14 @@ class PoemsController < ApplicationController
   end
 
   def create
-    
+    @user = current_user
+    @poem = @user.poems.create(params[:poem])
+
+    if @poem.save
+      redirect_to(@poem, notice =>'Your poem was successfully created.')
+    else
+      render('new')
+    end
   end
 
   def edit

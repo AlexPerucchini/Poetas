@@ -44,6 +44,27 @@ describe "Poems Pages" do
       it { should have_content(p1.title) }
       it { should have_content(p1.body) }
     end
+
+    describe "new poem page" do
+      before { visit new_poem_path }
+
+      describe "with invalid information" do
+
+        it "should not create a new poem" do
+          expect { click_button("New Poem") }.not_to change(Poem, :count)
+        end
+      end 
+
+      describe "with valid information" do
+        before do
+          fill_in "Title", with: "Poem 1"
+          fill_in "Poem", with: "Ipso Lorem..."
+        end
+
+        it "should create a new poem" do
+          expect { click_button("New Poem") }.to change(Poem, :count).by(1)
+        end
+      end
+    end
   end
- 
 end

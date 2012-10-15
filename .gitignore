@@ -26,6 +26,7 @@ db/*.sqlite3
 .rspec
 .redcar/
 .sass-cache
+/controllers/TODO.rb
 /config/config.yml
 /config/database.yml
 /coverage.data

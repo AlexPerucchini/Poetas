@@ -1,0 +1,26 @@
+
+<%= form_for(@poem) do |f| %>
+  <% if @poem.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@poem.errors.count, "error") %> prohibited
+        this poem from being saved:</h2>
+    <ul>
+    <% @poem.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body, "Poem" %>
+    <%= f.text_area :body, placeholder: "Compose new poem...", rows: "10" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "New Poem", class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>
