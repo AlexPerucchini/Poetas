@@ -26,5 +26,18 @@ class PoemsController < ApplicationController
   end
 
   def edit
+    @poem = Poem.find(params[:id])
   end
+
+  def update 
+    @poem = Poem.find(params[:id])
+    
+    if @poem.update_attributes(params[:poem])
+      redirect_to(@poem, :notice => 'Your poem was successfully updated.') 
+    else
+      render('edit')
+    end
+  end
+
+  
 end
