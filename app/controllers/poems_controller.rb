@@ -39,5 +39,12 @@ class PoemsController < ApplicationController
     end
   end
 
+  def destroy
+
+    #make sure it's the correct user
+    @poem = current_user.poems.find(params[:id])
+    @poem.destroy
+    redirect_to(poems_url)
+  end
   
 end

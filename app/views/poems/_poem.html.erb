@@ -5,6 +5,9 @@
     Created <%= time_ago_in_words(poem.created_at) %> ago.
   </span>
   <span class="links">
-    <%= link_to('Show', poem_path(poem)) %> | <%= link_to('Delete', '#') %>
+    <%= link_to('Show', poem_path(poem)) %> | <%= link_to('Delete', poem,
+      method: :delete,
+      data: { confirm: "Are you sure?"},
+      title: poem.title) %>
   </span>
 </li>

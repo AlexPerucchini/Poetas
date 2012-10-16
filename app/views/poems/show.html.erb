@@ -7,7 +7,12 @@
      Created by <%= @poem.user.name %>, <%= time_ago_in_words(@poem.created_at) %> ago.
     </span>
      <span class="links"> <%= link_to('My Poems', poems_path) %> | 
-      <%= link_to('Edit Poem', edit_poem_path(@poem)) %></span>
+      <%= link_to('Edit Poem', edit_poem_path(@poem)) %> |
+      <%= link_to('Delete Poem', @poem,
+        method: :delete,
+        data: { confirm: "Are you sure?"},
+        title: @poem.title) %>
+    </span>
   </div>
 </div>
 

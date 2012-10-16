@@ -3,7 +3,7 @@
 <div class="row">
   <div class="span8">
     <% if @user.poems.any? %>
-      <h3>Poems (<%= @user.poems.count %>)</h3>
+      <h3>Poems found (<%= @user.poems.count %>)</h3>
       <ol class="poems">
         <%= render(@poems) %>
       </ol>
