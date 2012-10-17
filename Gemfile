@@ -6,6 +6,7 @@ gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem 'jquery-rails'
+gem 'kaminari'
 
 
 # Gems used only for assets and not required

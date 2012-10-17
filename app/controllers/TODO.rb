@@ -1,6 +1,6 @@
-#TODO: poems controller create update and destroy method (in progress)
+#TODO: poems controller create update and destroy method (done)
 #FIXME: poems must preserve formatting (done)
-#TODO: add paginate to poem index action
+#TODO: add paginate to poem index action (done) needed kaminari and view fix for bootstrap  https://github.com/gabetax/twitter-bootstrap-kaminari-views/downloads
 #TODO: revise the poems to be a nested resource with the users
 #TODO: research spec update poem
 #TODO: research can can admin role

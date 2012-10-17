@@ -26,7 +26,7 @@ end
 
 def make_poems
   users = User.all(limit: 6)
-  10.times do
+  50.times do
     title = Faker::Lorem.sentence(1)
     body = Faker::Lorem.paragraphs(5)
     users.each do |user| 

@@ -3,7 +3,7 @@ class PoemsController < ApplicationController
   
   def index
     @user = current_user
-    @poems = @user.poems
+    @poems = @user.poems.page(params[:page]).per(10)
   end
 
   def new
