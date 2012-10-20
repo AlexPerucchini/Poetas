@@ -40,7 +40,6 @@ class PoemsController < ApplicationController
   end
 
   def destroy
-
     #make sure it's the correct user
     @poem = current_user.poems.find(params[:id])
     @poem.destroy
