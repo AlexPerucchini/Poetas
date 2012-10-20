@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
   def index
-    @users = User.page(params[:page]).per(10)
+    @poets = User.page(params[:page]).per(10)
   end
 
   def show
-    @user = User.find(params[:id])
+    @poet = User.find(params[:id])
+    redirect_to( user_poems_path(@poet))
   end
 
   def profile
-    @user = current_user
+    @poet = current_user
   end
 end

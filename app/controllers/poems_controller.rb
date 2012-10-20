@@ -2,8 +2,14 @@ class PoemsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @user = current_user
+     @user = current_user 
+     @poems = @user.poems.page(params[:page]).per(10)
+  end
+
+  def show_poems
+    @user_id = User.find(params[:id])
     @poems = @user.poems.page(params[:page]).per(10)
+    render('show')
   end
 
   def new

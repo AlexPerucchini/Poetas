@@ -3,9 +3,11 @@ Poetas::Application.routes.draw do
   root to: "static_pages#home"
 
   resources :poems
+  resources :users, only: :show, as: 'poet'
 
   devise_for :users
 
+  match '/user_poems',    to: "poems#show_poems"
   match '/poets',   to: "users#index"
   match '/profile', to: "users#profile"
   match '/contact', to: 'static_pages#contact'

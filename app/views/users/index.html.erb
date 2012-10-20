@@ -2,20 +2,20 @@
 <h1>Poets</h1>
 <div class="row">
   <div class="span12">
-    <% if @users.any? %>
-      <%= paginate @users %> 
+    <% if @poets.any? %>
+      <%= paginate @poets%> 
       <ul class="poets">
-        <% @users.each do |user| %>
+        <% @poets.each do |poet| %>
         <li>
-          <span class="title"><%= user.name %></span> <br>
+          <span class="title"><%= poet.name %> <br>
           <span class="timestamp">
-            Poems posted <%= user.poems.count %> <br>
-            Member since <%= time_ago_in_words(user.created_at) %> ago.
+            Poems posted <%= poet.poems.count %> <%= link_to('Show', poet_path(poet)) %><br>
+            Member since <%= time_ago_in_words(poet.created_at) %> ago.
           </span>
         </li>
         <% end %>
       </ul> 
-      <%= paginate @users %> 
+      <%= paginate @poets %> 
     <% end %>
   </div>
 </div>
