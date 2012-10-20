@@ -1,16 +1,14 @@
-<% provide(:title, @user.name) %>
-<h1>Poems by <%= @user.name %></h1>
+<% provide(:title, @poet.name) %>
+<h1>Poems by <%= @poet.name %></h1>
 <div class="row">
   <div class="span12">
-    <% if @user.poems.any? %>
-      <h3>Poems found (<%= @user.poems.count %>)</h3>
+    <% if @poet.poems.any? %>
+      <h3>Poems found (<%= @poet.poems.count %>)</h3>
       <%= paginate @poems %>  
       <ol class="poems">
         <%= render(@poems) %>
       </ol>
       <%= paginate @poems %>  
-    <% else %>
-      <h3> Don&#39;t be shy, click <%= link_to 'here', new_poem_path %> to add your poem!</h3>
     <% end %> 
   </div>
 </div>

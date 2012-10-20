@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @poet = User.find(params[:id])
-    redirect_to( user_poems_path(@poet))
+    redirect_to( poems_path(id: @poet.id) )
   end
 
   def profile

@@ -3,12 +3,15 @@
   <span class="title"><%= poem.title %></span>
   <span class="body"><%= truncate(poem.body, length: 120) %></span>
   <span class="timestamp">
-    Created <%= time_ago_in_words(poem.created_at) %> ago.
+    Created <%= time_ago_in_words(poem.created_at) %> ago. <br>
   </span>
   <span class="links">
-    <%= link_to('Show', poem_path(poem)) %> | <%= link_to('Delete', poem,
+    <%= link_to('Show', poem_path(poem)) %> 
+      <% if current_user.id == @poet.id %>
+      | <%= link_to('Delete', poem,
       method: :delete,
       data: { confirm: "Are you sure?"},
       title: poem.title) %>
+      <% end %>
   </span>
 </li>

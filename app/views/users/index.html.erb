@@ -9,7 +9,9 @@
         <li>
           <span class="title"><%= poet.name %> <br>
           <span class="timestamp">
-            Poems posted <%= poet.poems.count %> <%= link_to('Show', poet_path(poet)) %><br>
+            <% unless poet.poems.empty? %>
+            Poems posted <%= poet.poems.count %> - <%= link_to('Show', poet_path(poet)) %><br>
+            <% end %>
             Member since <%= time_ago_in_words(poet.created_at) %> ago.
           </span>
         </li>

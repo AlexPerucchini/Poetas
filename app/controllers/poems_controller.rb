@@ -2,14 +2,14 @@ class PoemsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-     @user = current_user 
-     @poems = @user.poems.page(params[:page]).per(10)
-  end
-
-  def show_poems
-    @user_id = User.find(params[:id])
-    @poems = @user.poems.page(params[:page]).per(10)
-    render('show')
+    #FIXME: refactor
+    if params[:id].nil? && current_user && signed_in?
+      @poet = current_user 
+      @poems = @poet.poems.page(params[:page]).per(10)
+    else
+      @poet = User.find(params[:id])
+      @poems = @poet.poems.page(params[:page]).per(10)
+    end    
   end
 
   def new
@@ -21,8 +21,8 @@ class PoemsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @poem = @user.poems.create(params[:poem])
+    @poet = current_user
+    @poem = @poet.poems.create(params[:poem])
 
     if @poem.save
       redirect_to(@poem, notice =>'Your poem was successfully created.')
@@ -51,5 +51,7 @@ class PoemsController < ApplicationController
     @poem.destroy
     redirect_to(poems_url)
   end
+
+  private
   
 end

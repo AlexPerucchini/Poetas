@@ -7,12 +7,10 @@ Poetas::Application.routes.draw do
 
   devise_for :users
 
-  match '/user_poems',    to: "poems#show_poems"
   match '/poets',   to: "users#index"
   match '/profile', to: "users#profile"
   match '/contact', to: 'static_pages#contact'
   match '/about',   to: 'static_pages#about'
-  match '/profile', to: 'static_pages#profile'
 
   devise_scope :user do
     match '/signup', to: 'devise/registrations#new'
@@ -22,7 +20,7 @@ Poetas::Application.routes.draw do
 
 end
 #== Route Map
-# Generated on 19 Oct 2012 18:25
+# Generated on 20 Oct 2012 10:36
 #
 #                    poems GET    /poems(.:format)          poems#index
 #                          POST   /poems(.:format)          poems#create
@@ -31,6 +29,7 @@ end
 #                     poem GET    /poems/:id(.:format)      poems#show
 #                          PUT    /poems/:id(.:format)      poems#update
 #                          DELETE /poems/:id(.:format)      poems#destroy
+#                     poet GET    /users/:id(.:format)      users#show
 #         new_user_session GET    /users/sign_in(.:format)  devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)  devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format) devise/sessions#destroy
@@ -44,7 +43,6 @@ end
 #                  profile        /profile(.:format)        users#profile
 #                  contact        /contact(.:format)        static_pages#contact
 #                    about        /about(.:format)          static_pages#about
-#                                 /profile(.:format)        static_pages#profile
 #                   signup        /signup(.:format)         devise/registrations#new
 #                   signin        /signin(.:format)         devise/sessions#new
 #                   logout        /logout(.:format)         devise/sessions#destroy

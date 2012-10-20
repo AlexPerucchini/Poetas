@@ -6,6 +6,7 @@
     <span class="timestamp">
      Created by <%= @poem.user.name %>, <%= time_ago_in_words(@poem.created_at) %> ago.
     </span>
+    <% if current_user.id == @poem.user.id %>
      <span class="links"> <%= link_to('My Poems', poems_path) %> | 
       <%= link_to('Edit Poem', edit_poem_path(@poem)) %> |
       <%= link_to('Delete Poem', @poem,
@@ -13,6 +14,7 @@
         data: { confirm: "Are you sure?"},
         title: @poem.title) %>
     </span>
+    <% end %>
   </div>
 </div>
 
