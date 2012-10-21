@@ -10,6 +10,7 @@ gem 'kaminari'
 
 group :production do
   gem 'pg'
+  gem "faker", "1.0.1"
 end
 
 
