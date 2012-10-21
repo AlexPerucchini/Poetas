@@ -7,7 +7,11 @@ gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'pg'
+
+group :production do
+  gem 'pg'
+end
+
 
 
 # Gems used only for assets and not required
