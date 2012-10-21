@@ -1,11 +1,14 @@
 Poetas::Application.routes.draw do
   
+  #must be places above the users resources
+  devise_for :users
+
   root to: "static_pages#home"
 
   resources :poems
   resources :users, only: :show, as: 'poet'
 
-  devise_for :users
+  
 
   match '/poets',   to: "users#index"
   match '/profile', to: "users#profile"
