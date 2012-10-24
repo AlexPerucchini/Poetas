@@ -14,6 +14,8 @@ describe "User Pages" do
   describe "poets page" do
 
     let(:user) { FactoryGirl.create(:user) }
+    let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
+
     before do 
       sign_in(user) 
       visit(poets_path)
@@ -25,10 +27,9 @@ describe "User Pages" do
     it "should link to poets poem" do
       page.should have_link("Poems")
       click_link("Poems")
-      page.should have_selector('h1', text: "Poems by #{user.name}") 
+      page.should have_content("Poems by #{user.name}") 
     end 
   end
-
   describe "profile page" do
     
     let(:user) { FactoryGirl.create(:user) }

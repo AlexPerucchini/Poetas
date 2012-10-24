@@ -4,7 +4,7 @@ describe "Authentication" do
   
   subject { page }
 
-  describe "sign in " do
+  describe "signin / logout  " do
     
     before { visit(signin_path) }
     it { should have_selector('h1',    text: "Sign in") }
@@ -34,6 +34,11 @@ describe "Authentication" do
       it { should have_selector('small',  text: "Signed in as #{user.name}.") }
       it { should have_link('Logout') }
 
+      it "should logout user" do
+        click_link('Logout')
+        page.should have_content('Signed out successfully.')
+        page.should have_link('Sign-in')  
+      end
     end
   end
 
