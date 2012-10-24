@@ -6,16 +6,19 @@ describe "Poems Pages" do
   subject { page }
 
   describe "non authenticated user" do
+    
     before { visit(poems_path) }
     it { should have_selector('h1',    text: "Sign in") }
     it { should have_selector('title', text: "Poetas - Sign in") }
   end
 
   describe "authenticated user user" do
+
       let(:user) { FactoryGirl.create(:user) }
       before { sign_in(user) }
 
     describe "index page" do
+
       let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
       let!(:p2) { FactoryGirl.create(:poem, user: user, title: "Poem 2", body: "Ipsum...") }
 
@@ -27,6 +30,7 @@ describe "Poems Pages" do
       it { should have_link("Show") }
 
       describe "poems" do
+
         it { should have_content(p1.title) }
         it { should have_content(p2.title) }
         it { should have_content(p1.body) }
@@ -36,6 +40,7 @@ describe "Poems Pages" do
     end
 
     describe "show page" do
+
       let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
       before {  visit(poem_path(p1)) }
 
@@ -46,6 +51,7 @@ describe "Poems Pages" do
     end
 
     describe "new poem page" do
+
       before { visit new_poem_path }
 
       describe "with invalid information" do
@@ -61,6 +67,7 @@ describe "Poems Pages" do
       end 
 
       describe "with valid information" do
+
         before do
           fill_in "Title",  with: "Poem 1"
           fill_in "Poem",   with: "Ipso Lorem..."
@@ -73,6 +80,7 @@ describe "Poems Pages" do
     end
 
     describe "update poem" do
+
       let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
       before { visit edit_poem_path(p1) }
 
@@ -82,6 +90,7 @@ describe "Poems Pages" do
       describe "with valid information" do
         pending "need to research test"
       end
+
       describe "with invalid information" do
         
         it "should not update a poem" do
@@ -89,6 +98,7 @@ describe "Poems Pages" do
         end
 
         describe "error messages" do
+
           before do
             fill_in "Title",  with: " "
             fill_in "Poem",   with: " "
@@ -100,6 +110,7 @@ describe "Poems Pages" do
     end
 
     describe "delete poem" do
+      
       let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
       let!(:p2) { FactoryGirl.create(:poem, user: user, title: "Poem 2", body: "Ipsum...") }
       

@@ -1,5 +1,4 @@
 class PoemsController < ApplicationController
-  before_filter :authenticate_user!
   
   def index
     #FIXME: refactor
