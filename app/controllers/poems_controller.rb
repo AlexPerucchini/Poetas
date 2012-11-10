@@ -1,15 +1,9 @@
 class PoemsController < ApplicationController
   
   def index
-    #FIXME: refactor
-    if params[:id].nil? && current_user && signed_in?
-      @poet = current_user 
-      @poems = @poet.poems.page(params[:page]).per(10)
-    else
-      @poet = User.find(params[:id])
+    @poet = params[:poet_id] ? User.find(params[:poet_id]) : current_user
       @poems = @poet.poems.page(params[:page]).per(10)
     end    
-  end
 
   def new
     @poem = Poem.new

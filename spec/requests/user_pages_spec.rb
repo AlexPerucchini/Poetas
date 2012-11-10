@@ -25,6 +25,7 @@ describe "User Pages" do
     it { should have_selector('title', text: "Poetas - Poets") }
 
     it "should link to poets poem" do
+      #TODO: research why this fails
       page.should have_link("Poems")
       click_link("Poems")
       page.should have_content("Poems by #{user.name}") 

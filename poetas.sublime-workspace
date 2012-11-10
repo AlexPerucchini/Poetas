@@ -434,6 +434,54 @@
 				"buffer_size": 2510,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "spec/requests/user_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1207,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/application_controller.rb",
+			"settings":
+			{
+				"buffer_size": 230,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/poems_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 3898,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/static_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1228,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/authentication_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1915,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/factories/factories.rb",
+			"settings":
+			{
+				"buffer_size": 285,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -500,6 +548,7 @@
 	},
 	"file_history":
 	[
+		"/Users/alexp/Documents/code/rails/poetas/app/controllers/poems_controller.rb",
 		"/Users/alexp/Documents/code/rails/poetas/Gemfile",
 		"/Users/alexp/Documents/code/rails/poetas/db/migrate/20120930145554_devise_create_users.rb",
 		"/Users/alexp/Documents/code/rails/poetas/README",
@@ -507,7 +556,6 @@
 		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/sessions/new.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/models/poem.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/users/index.html.erb",
-		"/Users/alexp/Documents/code/rails/poetas/app/controllers/poems_controller.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/show.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/_poem.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/index.html.erb",
@@ -703,7 +751,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -725,6 +773,172 @@
 						"settings":
 						{
 							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "spec/requests/user_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/application_controller.rb",
+					"settings":
+					{
+						"buffer_size": 230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "spec/requests/poems_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 3898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3175,
+								3175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1118.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "spec/requests/static_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								448,
+								448
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "spec/requests/authentication_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1191,
+								1191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 286.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "spec/factories/factories.rb",
+					"settings":
+					{
+						"buffer_size": 285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},

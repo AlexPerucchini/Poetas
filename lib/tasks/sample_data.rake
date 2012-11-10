@@ -12,7 +12,7 @@ def make_users
                        email:    "alexp@test.com",
                        password: "foobar",
                        password_confirmation: "foobar")
-  #admin.toggle!(:admin)
+  admin.add_role :admin
   25.times do |n|
     name  = Faker::Name.name
     email = "user#{n+1}@test.com"
