@@ -7,6 +7,7 @@ gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem 'jquery-rails'
 gem 'kaminari'
+gem 'permanent_records', ">= 2.3.0"
 
 group :production do
   gem 'pg'

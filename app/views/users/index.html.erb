@@ -17,13 +17,34 @@
           <span class="link">
             <!-- only display the delete if a user has the admin role and not the current user-->
             <% if current_user.has_role?(:admin) && poet.id != current_user.id %>
-              <%= link_to("Delete") %>
+               <%= link_to('Delete', poet_path(poet), 
+                method: :delete,
+                data: { confirm: "Are you sure?"}) %>
            <% end %>
           </spam>
         </li>
         <% end %>
       </ul> 
       <%= paginate @poets %> 
+    <% end %>
+  </div>
+  <!-- This is a temporary view -->
+  <div class="span12">
+    <% if @deleted_poets.any? && current_user.has_role?(:admin) %>
+      <h1>Deleted Poets</h1>
+      <h3><%= pluralize(@deleted_poets.count, 'poet') %> record found</h3>
+      <ul class="poets">
+        <% @deleted_poets.each do |poet| %>
+        <li>
+          <span class="title"><%= poet.name %> <br>
+          <span class="link">
+            <%= link_to('Undelete User', revive_path(poet), 
+              method: :revive,
+              data: { confirm: "Are you sure?"}) %>
+          </spam>
+        </li>
+        <% end %>
+      </ul>
     <% end %>
   </div>
 </div>

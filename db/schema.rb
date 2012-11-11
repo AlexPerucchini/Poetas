@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011135601) do
+ActiveRecord::Schema.define(:version => 20121111163839) do
 
   create_table "poems", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20121011135601) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.datetime "deleted_at"
   end
 
   add_index "poems", ["user_id", "created_at"], :name => "index_poems_on_user_id_and_created_at"
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20121011135601) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.datetime "deleted_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
