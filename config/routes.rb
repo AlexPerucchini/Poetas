@@ -13,7 +13,7 @@ Poetas::Application.routes.draw do
   match '/profile', to: "users#profile"
   match '/contact', to: 'static_pages#contact'
   match '/about',   to: 'static_pages#about'
-  #TODO: this route will go away
+  #TODO: this route will go away once the new admin controller is implemented
   match '/revive/:id',  to: 'users#revive', as: :revive
 
   devise_scope :user do

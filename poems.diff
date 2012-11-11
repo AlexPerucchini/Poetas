@@ -1,0 +1,70 @@
+From 87e7d7307e17606e7db8ab5e097b1bf938f723f2 Mon Sep 17 00:00:00 2001
+From: Peter Jones <pjones@pmade.com>
+Date: Mon, 5 Nov 2012 12:45:51 -0700
+Subject: [PATCH] Convert the poems controller to be a nested resource
+ controller
+
+---
+ app/controllers/poems_controller.rb |    8 +-------
+ app/views/users/index.html.erb      |    2 +-
+ config/routes.rb                    |    7 +++----
+ 3 files changed, 5 insertions(+), 12 deletions(-)
+
+diff --git a/app/controllers/poems_controller.rb b/app/controllers/poems_controller.rb
+index c9d9239..6ddb751 100644
+--- a/app/controllers/poems_controller.rb
++++ b/app/controllers/poems_controller.rb
+@@ -1,15 +1,9 @@
+ class PoemsController < ApplicationController
+ 
+   def index
+-    #FIXME: refactor
+-    if params[:id].nil? && current_user && signed_in?
+-      @poet = current_user 
+-      @poems = @poet.poems.page(params[:page]).per(10)
+-    else
+-      @poet = User.find(params[:id])
++    @poet = params[:poet_id] ? User.find(params[:poet_id]) : current_user
+     @poems = @poet.poems.page(params[:page]).per(10)
+   end
+-  end
+ 
+   def new
+     @poem = Poem.new
+diff --git a/app/views/users/index.html.erb b/app/views/users/index.html.erb
+index 89dcfd6..0fb3bcc 100644
+--- a/app/views/users/index.html.erb
++++ b/app/views/users/index.html.erb
+@@ -10,7 +10,7 @@
+           <span class="title"><%= poet.name %> <br>
+           <span class="timestamp">
+             <% unless poet.poems.empty? %>
+-            Poems posted (<%= poet.poems.count %>) - <%= link_to('Poems', poet_path(poet)) %><br>
++            Poems posted (<%= poet.poems.count %>) - <%= link_to('Poems', poet_poems_path(poet)) %><br>
+             <% end %>
+             Member since <%= time_ago_in_words(poet.created_at) %> ago.
+           </span>
+diff --git a/config/routes.rb b/config/routes.rb
+index 3da542b..4a28492 100644
+--- a/config/routes.rb
++++ b/config/routes.rb
+@@ -4,13 +4,12 @@ Poetas::Application.routes.draw do
+   devise_for :users
+ 
+   root to: "static_pages#home"
+-
+   resources :poems
+-  resources :users, only: :show, as: 'poet'
+-
+ 
++  resources :poets, controller: "users" do
++    resources :poems
++  end
+ 
+-  match '/poets',   to: "users#index"
+   match '/profile', to: "users#profile"
+   match '/contact', to: 'static_pages#contact'
+   match '/about',   to: 'static_pages#about'
+-- 
+1.7.10.4
+

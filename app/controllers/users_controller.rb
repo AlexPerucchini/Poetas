@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+  #TODO: create rpsec tests for destry and revive actions!
   def index
     #added the not_deleted method to show users not logically deleted
     #from the database
