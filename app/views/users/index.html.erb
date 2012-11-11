@@ -19,7 +19,6 @@
             <% if current_user.has_role?(:admin) && poet.id != current_user.id %>
                <%= link_to('Delete', poet_path(poet), 
                 method: :delete,
-                data: { confirm: "Are you sure?" },
                 remote: true) %>
            <% end %>
           </spam>
@@ -38,6 +37,7 @@
         <% @deleted_poets.each do |poet| %>
         <li>
           <span class="title"><%= poet.name %> <br>
+          <span class="timestamp"> Deleted <%= time_ago_in_words(poet.deleted_at) %> ago.</span>
           <span class="link">
             <%= link_to('Undelete User', revive_path(poet), 
               method: :revive,

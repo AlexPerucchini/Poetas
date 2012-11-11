@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   #TODO: move the destroy and revive methods to a new controller
+  #TODO: get working ajax call for destroy and revive
   #using permanent_record with a deleted_at column added to the Users and Poems table
   #this will logically delete the user and the associated poems
   def destroy
