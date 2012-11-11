@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 
   has_many :poems, dependent: :destroy
 
-  validates :name, presence: true, length: { maximum: 50}
+  validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true
 
   default_scope order: 'users.name ASC'

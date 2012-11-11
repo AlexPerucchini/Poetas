@@ -2,8 +2,8 @@ class PoemsController < ApplicationController
   
   def index
     @poet = params[:poet_id] ? User.find(params[:poet_id]) : current_user
-      @poems = @poet.poems.page(params[:page]).per(10)
-    end    
+    @poems = @poet.poems.page(params[:page]).per(10)
+  end    
 
   def new
     @poem = Poem.new
