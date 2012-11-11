@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  #TODO: create rpsec tests for destry and revive actions!
+  #TODO: create rpsec tests for destroy and rwvicw
   def index
     #added the not_deleted method to show users not logically deleted
     #from the database
@@ -23,7 +23,12 @@ class UsersController < ApplicationController
   def destroy
     @poet = User.find(params[:id])
     @poet.destroy
-    redirect_to(poets_path)
+
+    respond_to do |format|
+      format.html { redirect_to poets_url }
+      format.json { head :ok }
+      format.js
+    end
   end
 
   def revive

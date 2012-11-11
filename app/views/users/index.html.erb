@@ -19,7 +19,8 @@
             <% if current_user.has_role?(:admin) && poet.id != current_user.id %>
                <%= link_to('Delete', poet_path(poet), 
                 method: :delete,
-                data: { confirm: "Are you sure?"}) %>
+                data: { confirm: "Are you sure?" },
+                remote: true) %>
            <% end %>
           </spam>
         </li>
@@ -40,7 +41,7 @@
           <span class="link">
             <%= link_to('Undelete User', revive_path(poet), 
               method: :revive,
-              data: { confirm: "Are you sure?"}) %>
+              data: { confirm: "Are you sure?" }) %>
           </spam>
         </li>
         <% end %>
