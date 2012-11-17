@@ -6,7 +6,7 @@
       <%= paginate @poets%> 
       <ul class="poets">
         <% @poets.each do |poet| %>
-        <li>
+        <li id="<%= dom_id(poet) %>">
           <span class="title"><%= poet.name %> <br>
           <span class="timestamp">
             <% unless poet.poems.empty? %>
@@ -39,9 +39,7 @@
           <span class="title"><%= poet.name %> <br>
           <span class="timestamp"> Deleted <%= time_ago_in_words(poet.deleted_at) %> ago.</span>
           <span class="link">
-            <%= link_to('Undelete User', revive_path(poet), 
-              method: :revive,
-              data: { confirm: "Are you sure?" }) %>
+            
           </spam>
         </li>
         <% end %>

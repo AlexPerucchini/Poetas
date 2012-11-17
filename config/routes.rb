@@ -8,13 +8,14 @@ Poetas::Application.routes.draw do
   
   resources :poets, controller: "users" do
     resources :poems
+    member do
+      get 'revive'
+    end
   end
 
   match '/profile', to: "users#profile"
   match '/contact', to: 'static_pages#contact'
   match '/about',   to: 'static_pages#about'
-  #TODO: this route will go away once the new admin controller is implemented
-  match '/revive/:id',  to: 'users#revive', as: :revive
 
   devise_scope :user do
     match '/signup', to: 'devise/registrations#new'
@@ -24,7 +25,7 @@ Poetas::Application.routes.draw do
 
 end
 #== Route Map
-# Generated on 11 Nov 2012 08:06
+# Generated on 14 Nov 2012 18:32
 #
 #             user_session POST   /users/sign_in(.:format)                 devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)                devise/sessions#destroy
@@ -49,6 +50,7 @@ end
 #                poet_poem GET    /poets/:poet_id/poems/:id(.:format)      poems#show
 #                          PUT    /poets/:poet_id/poems/:id(.:format)      poems#update
 #                          DELETE /poets/:poet_id/poems/:id(.:format)      poems#destroy
+#              revive_poet GET    /poets/:id/revive(.:format)              users#revive
 #                    poets GET    /poets(.:format)                         users#index
 #                          POST   /poets(.:format)                         users#create
 #                 new_poet GET    /poets/new(.:format)                     users#new

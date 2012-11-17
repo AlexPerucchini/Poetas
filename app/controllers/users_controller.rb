@@ -26,8 +26,7 @@ class UsersController < ApplicationController
     @poet.destroy
 
     respond_to do |format|
-      format.html { redirect_to poets_url }
-      format.json { head :ok }
+      format.html { redirect_to poets_path }
       format.js
     end
   end
