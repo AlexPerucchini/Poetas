@@ -20,6 +20,7 @@ db/*.sqlite3
 /tmp/*
 
 # various artifacts
+mojo.diff
 **.war
 *.rbc
 *.sassc

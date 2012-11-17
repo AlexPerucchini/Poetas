@@ -1,31 +1,36 @@
 Poetas::Application.routes.draw do
-  
-  #must be places above the users resources
-  devise_for :users
+  #devise_for must be the first route for Heroku prod
+  devise_for(:users)
 
-  root to: "static_pages#home"
-  resources :poems
-  
-  resources :poets, controller: "users" do
-    resources :poems
-    member do
-      get 'revive'
+  root(to: "static_pages#home")
+ 
+  resource(:admin, controller: 'admin')
+
+  namespace(:admin) do
+    resources(:users) do
+      get 'revive', on: :member
     end
   end
+  
+  resources(:poems)
 
-  match '/profile', to: "users#profile"
-  match '/contact', to: 'static_pages#contact'
-  match '/about',   to: 'static_pages#about'
+  resources(:poets, controller: "users") do
+    resources :poems
+  end
 
-  devise_scope :user do
-    match '/signup', to: 'devise/registrations#new'
-    match '/signin', to: 'devise/sessions#new'
-    match '/logout', to: 'devise/sessions#destroy' 
+  match('/profile', to: "users#profile")
+  match('/contact', to: 'static_pages#contact')
+  match('/about',   to: 'static_pages#about')
+
+  devise_scope(:user) do
+    match('/signup', to: 'devise/registrations#new')
+    match('/signin', to: 'devise/sessions#new')
+    match('/logout', to: 'devise/sessions#destroy') 
   end
 
 end
 #== Route Map
-# Generated on 14 Nov 2012 18:32
+# Generated on 17 Nov 2012 11:02
 #
 #             user_session POST   /users/sign_in(.:format)                 devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)                devise/sessions#destroy
@@ -36,6 +41,20 @@ end
 #                          PUT    /users(.:format)                         devise/registrations#update
 #                          DELETE /users(.:format)                         devise/registrations#destroy
 #                     root        /                                        static_pages#home
+#                    admin POST   /admin(.:format)                         admin#create
+#                new_admin GET    /admin/new(.:format)                     admin#new
+#               edit_admin GET    /admin/edit(.:format)                    admin#edit
+#                          GET    /admin(.:format)                         admin#show
+#                          PUT    /admin(.:format)                         admin#update
+#                          DELETE /admin(.:format)                         admin#destroy
+#        revive_admin_user GET    /admin/users/:id/revive(.:format)        admin/users#revive
+#              admin_users GET    /admin/users(.:format)                   admin/users#index
+#                          POST   /admin/users(.:format)                   admin/users#create
+#           new_admin_user GET    /admin/users/new(.:format)               admin/users#new
+#          edit_admin_user GET    /admin/users/:id/edit(.:format)          admin/users#edit
+#               admin_user GET    /admin/users/:id(.:format)               admin/users#show
+#                          PUT    /admin/users/:id(.:format)               admin/users#update
+#                          DELETE /admin/users/:id(.:format)               admin/users#destroy
 #                    poems GET    /poems(.:format)                         poems#index
 #                          POST   /poems(.:format)                         poems#create
 #                 new_poem GET    /poems/new(.:format)                     poems#new
@@ -50,7 +69,6 @@ end
 #                poet_poem GET    /poets/:poet_id/poems/:id(.:format)      poems#show
 #                          PUT    /poets/:poet_id/poems/:id(.:format)      poems#update
 #                          DELETE /poets/:poet_id/poems/:id(.:format)      poems#destroy
-#              revive_poet GET    /poets/:id/revive(.:format)              users#revive
 #                    poets GET    /poets(.:format)                         users#index
 #                          POST   /poets(.:format)                         users#create
 #                 new_poet GET    /poets/new(.:format)                     users#new

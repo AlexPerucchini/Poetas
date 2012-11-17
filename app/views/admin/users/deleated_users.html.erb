@@ -1,0 +1,21 @@
+<h1>Deleated Poets</h1>
+<div class="row">
+  <div class="span12">
+    <% if @deleted_poets.any? && current_user.has_role?(:admin) %>
+      <h1>Deleted Poets</h1>
+      <h3><%= pluralize(@deleted_poets.count, 'poet') %> record found</h3>
+      <ul class="poets">
+        <% @deleted_poets.each do |poet| %>
+        <li>
+          <span class="title"><%= poet.name %> <br>
+          <span class="timestamp"> Deleted <%= time_ago_in_words(poet.deleted_at) %> ago.</span>
+          <span class="link">
+            
+          </spam>
+        </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>
+
