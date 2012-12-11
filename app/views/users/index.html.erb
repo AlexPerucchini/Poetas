@@ -7,7 +7,7 @@
       <ul class="poets">
         <% @poets.each do |poet| %>
         <li id="<%= dom_id(poet) %>">
-          <span class="title"><%= poet.name %> <br>
+          <span class="title"><%= poet.name %> </span><br>
           <span class="timestamp">
             <% unless poet.poems.empty? %>
             Poems posted (<%= poet.poems.count %>) - <%= link_to('Poems', poet_poems_path(poet)) %><br>

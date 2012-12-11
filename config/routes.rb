@@ -8,7 +8,9 @@ Poetas::Application.routes.draw do
 
   namespace(:admin) do
     resources(:users) do
-      get 'revive', on: :member
+      member do
+        get('revive')
+      end
     end
   end
   
@@ -30,7 +32,7 @@ Poetas::Application.routes.draw do
 
 end
 #== Route Map
-# Generated on 17 Nov 2012 11:02
+# Generated on 11 Dec 2012 06:43
 #
 #             user_session POST   /users/sign_in(.:format)                 devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)                devise/sessions#destroy
