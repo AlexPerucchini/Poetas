@@ -6,7 +6,8 @@
       <ul class="nav pull-right">
         <li><%= link_to "Home",    root_path %></li>
         <% if user_signed_in? %>
-           <li><%= link_to "Poets", poets_path %></li>
+          <li><%= link_to "Poets", poets_path %></li>
+          <!-- Poems section -->
           <li id="fat-menu" class="dropdown">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Poems <b class="caret"></b>
@@ -16,7 +17,7 @@
               <li><%= link_to "New Poem", new_poem_path %></li>
             </ul>
           </li>
-          
+          <!-- account -->
           <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
@@ -28,9 +29,18 @@
               <li><%= link_to "Logout", logout_path %></li>
             </ul>
           </li>
+          <!-- admin -->
+           <li id="fat-menu" class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Admin <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Users", admin_users_path %></li>
+            </ul>
+          </li>
         <% else %>
           <li><%= link_to "Sign-in", signin_path %></li>
-        <% end %>
+      <% end %>  
       </ul>
     </nav>
   </div>
