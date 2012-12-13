@@ -4,9 +4,9 @@
   <div class="span6  offset3">
     <ul class="poets">
       <li><b>Email</b> - <%= @poet.email %><br>
-          <b>Member since</b>-<%= time_ago_in_words(@poet.created_at) %> ago<br>
-          <b>Last activity</b>-<%= time_ago_in_words(@poet.last_sign_in_at) %> ago<br>
-          <b>Poems created</b>-<%= @poet.poems.count %><br>
+          <b>Member since</b> - <%= time_ago_in_words(@poet.created_at) %> ago<br>
+          <b>Last activity</b> - <%= time_ago_in_words(@poet.last_sign_in_at) %> ago<br>
+          <b>Poems created</b> - <%= @poet.poems.count %><br>
       </li>
     </ul>
   </div>
