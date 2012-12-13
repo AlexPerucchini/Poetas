@@ -3,6 +3,7 @@ class Admin::UsersController < AdminController
   def index
     #@users = User.not_deleted(params[:page]).per(10) 
     @users = User.all
+    @deleted_users = User.deleted
     respond_with(@user)
   end
 
