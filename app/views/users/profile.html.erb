@@ -3,11 +3,10 @@
 <div class="row">
   <div class="span6  offset3">
     <ul class="poets">
-      <li><b>Email:</b> <%= @poet.email %> <br>
-          <b>Account created on:</b> <%= @poet.created_at %> <br>
-          <b>Account updated at:</b> <%= @poet.updated_at %> <br>
-          <b>Account last sign in at:</b> <%= @poet.last_sign_in_at %> <br>
-          <b>Account last sign in ip:</b> <%= @poet.current_sign_in_ip %> 
+      <li><b>Email</b> - <%= @poet.email %><br>
+          <b>Member since</b>-<%= time_ago_in_words(@poet.created_at) %> ago<br>
+          <b>Last activity</b>-<%= time_ago_in_words(@poet.last_sign_in_at) %> ago<br>
+          <b>Poems created</b>-<%= @poet.poems.count %><br>
       </li>
     </ul>
   </div>

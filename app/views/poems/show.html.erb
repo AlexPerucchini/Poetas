@@ -1,5 +1,5 @@
 <% provide(:title,@poem.title ) %>
-<span class="title"><%= @poem.title %></span> <br><br>
+<h3><%= @poem.title %></h3> <br>
 <div class="row .poems">
   <div class="span8">
     <span class="body"><%= simple_format(@poem.body) %></span>
@@ -14,7 +14,9 @@
         data: { confirm: "Are you sure?"},
         title: @poem.title) %>
     </span>
-    <% end %>
+    <% end %> <br><br>
+    <h4>Text Analyzer</h4>
+    <%= text_analyzer(@poem) %>
   </div>
 </div>
 
