@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   def home
     @poems_count = Poem.count
     @poets_count = User.count
-    @latest_poet = User.where("created_at > ?", Time.zone.now - 1.hour).last
+    @latest_poet = User.last
   end
 
   def about
