@@ -15,6 +15,7 @@ class Admin::UsersController < AdminController
   def revive
      @user = User.find(params[:id])
      @user.revive
-     respond_with(@user, :location => admin_users_path)
+     redirect_to(admin_users_path)
+     #respond_with(@user, :location => admin_users_path)
   end
 end
