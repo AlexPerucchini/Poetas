@@ -10,8 +10,11 @@
 
   <h2>Community news</h2>
   <p>Poetas welcomes our lastest poet <strong><%= @latest_poet.name %></strong> . Our community has grown to <%= pluralize(@poets_count, 'poets') %>! And 
-    so far we have <%= pluralize(@poems_count, 'poem') %> added to the site!<br></p>
-    
+    so far we have <%= pluralize(@poems_count, 'poem') %> added to the site!</p><br><br>
+  <h2>Featured Poem</h2>
+  <h3> <%= @featured_poem.title %></h3>
+  <p> <%= @featured_poem.body %></p>
+  <p> by <%= @featured_poem.user.name %>.</p>
 </div>
 
 <% else %>

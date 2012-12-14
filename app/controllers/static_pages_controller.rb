@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
     @poems_count = Poem.count
     @poets_count = User.count
     @latest_poet = User.last
+    @featured_poem = Poem.last
   end
 
   def about
