@@ -11,7 +11,7 @@ describe "User Pages" do
     it { should have_selector('title', text: "Poetas - Sign in") }
   end
 
-  describe "poets page for autheniticated user" do
+  describe "poets page for authenticated user" do
 
     let(:user) { FactoryGirl.create(:user) }
     let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
@@ -31,7 +31,7 @@ describe "User Pages" do
     end 
   end
   
-  describe "profile page for autheniticated user" do
+  describe "profile page for authenticated user" do
     
     let(:user) { FactoryGirl.create(:user) }
 
