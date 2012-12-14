@@ -11,7 +11,7 @@ describe "User Pages" do
     it { should have_selector('title', text: "Poetas - Sign in") }
   end
 
-  describe "poets page" do
+  describe "poets page for autheniticated user" do
 
     let(:user) { FactoryGirl.create(:user) }
     let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
@@ -25,22 +25,22 @@ describe "User Pages" do
     it { should have_selector('title', text: "Poetas - Poets") }
 
     it "should link to poets poem" do
-      #TODO: research why this fails
       page.should have_link("Poems")
       click_link("Poems")
-      page.should have_content("Poems by #{user.name}") 
+      page.should have_selector('h1', content: "Poems by #{user.name}") 
     end 
   end
-  describe "profile page" do
+  
+  describe "profile page for autheniticated user" do
     
     let(:user) { FactoryGirl.create(:user) }
-    before do 
-      sign_in(user) 
+
+    before(:each) do 
       visit(profile_path)
     end
 
-    it { should have_selector('h1',     text: "#{user.name}'s Profile") }
-    it { should have_selector('title',  text: "Poetas - Profile") }
-    it { should have_selector('li',     text: "#{user.email}")}  
+    it { should have_selector('h1',     content: "#{user.name}'s Profile") }
+    it { should have_selector('title',  content: "Poetas - Profile") }
+    it { should have_selector('li',     content: "#{user.email}")}  
   end
 end
