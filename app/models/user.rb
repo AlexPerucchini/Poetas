@@ -38,4 +38,12 @@ class User < ActiveRecord::Base
   validates :email, presence: true
 
   #default_scope order: 'users.name DESC'
+
+  #After authenticating a user and in each request, Devise checks if your model 
+  #is active by calling model.active_for_authentication?. This method is 
+  #overwriten by other devise modules. 
+  def active_for_authentication?
+    #the deleted? method is part of the permanent_record
+    super && !deleted?
+  end
 end
