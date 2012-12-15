@@ -9,13 +9,14 @@
       <span class="title"> <%= user.name %> 
         <% unless user == current_user %> |
           <span id="<%= dom_id(user) %>">
-          <% if user.deleted_at.nil? %>
+          <!-- deleted? is a permanent record method -->
+          <% if user.deleted? %>
+           <%= link_to('Activate', revive_admin_user_path(user),
+                    data: {confirm: "Activate account?"}) %>   
+          <% else %>
             <%= link_to('Delete', admin_user_path(user),
                     method: :delete,
                     data: { confirm: "Delete Account?" }) %>
-          <% else %>
-           <%= link_to('Activate', revive_admin_user_path(user),
-                    data: {confirm: "Activate account?"}) %>    
           <% end %>
           </span>
         <% end %>

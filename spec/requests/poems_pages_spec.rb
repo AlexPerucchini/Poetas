@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Poems Pages" do
-  
+
   
   subject { page }
 
