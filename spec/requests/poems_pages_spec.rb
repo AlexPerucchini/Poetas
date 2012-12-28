@@ -12,7 +12,7 @@ describe "Poems Pages" do
     it { should have_selector('title', text: "Poetas - Sign in") }
   end
 
-  describe "authenticated user user" do
+  describe "authenticated user" do
 
       let(:user) { FactoryGirl.create(:user) }
       before { sign_in(user) }
@@ -44,8 +44,8 @@ describe "Poems Pages" do
       let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
       before {  visit(poem_path(p1)) }
 
-      it { should have_selector('span.title', text: p1.title) }
-      it { should have_selector('title',      text: "Poetas - #{p1.title}") }
+      it { should have_selector('h3', content: p1.title) }
+      it { should have_selector('title',      content: "Poetas - #{p1.title}") }
       it { should have_content(p1.title) }
       it { should have_content(p1.body) }
     end
@@ -114,21 +114,25 @@ describe "Poems Pages" do
       let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
       let!(:p2) { FactoryGirl.create(:poem, user: user, title: "Poem 2", body: "Ipsum...") }
       
-      describe "as user on index page" do
+      describe "on poems index page" do
         
         before { visit poems_path }
-        
-        it "should delete a poem " do
-          expect { click_link("Delete") }.to change(Poem, :count).by(-1) 
+      
+        it { should have_content("Delete Poem") }
+
+        it "should delete a poem" do
+          expect { click_link "Delete Poem" }.to change(Poem, :count).by(-1) 
         end
       end
 
-      describe "as user on show page" do
+      describe "on poems show page" do
         
         before { visit poem_path(p1) } 
 
-        it "should delete a poem " do
-          expect { click_link("Delete") }.to change(Poem, :count).by(-1) 
+        it { should have_content("Delete Poem") }
+
+        it "should delete a poem" do
+          expect { click_link("Delete Poem") }.to change(Poem, :count).by(-1) 
         end
       end
     end
