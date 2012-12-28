@@ -15,8 +15,17 @@
         title: @poem.title) %>
     </span>
     <% end %> <br><br>
-    <h4>Text Analyzer</h4>
-    <%= text_analyzer(@poem) %>
+    <h4>Poem Analysis</h4>
+    <ul>
+      <li><%= pluralize(@ta.lines_count, 'line') %> </li>
+      <li><%= @ta.character_count %> characters</li>
+      <li><%= @ta.character_count_nospaces %> characters (no spaces)</li>
+      <li><%= pluralize(@ta.sentence_count, 'sentence') %></li>
+      <li><%= pluralize(@ta.paragraph_count, 'paragraph') %> </li>
+      <li><%= pluralize(@ta.words_per_sentence, 'word')  %> per sentence </li>
+      <li><%= pluralize(@ta.sentences_per_paragraph, 'sentence')  %> per paragraph </li>
+      <li><%= @ta.no_fluff_percentage %>% fluff free </li>
+    </ul>
   </div>
 </div>
 

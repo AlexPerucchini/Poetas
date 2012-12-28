@@ -1,3 +1,6 @@
+
+
+include ActionView::Helpers::TextHelper
 class PoemsController < ApplicationController
   
   def index
@@ -11,6 +14,9 @@ class PoemsController < ApplicationController
 
   def show
     @poem = Poem.find(params[:id])
+    #need to use simple_format here fot the text_analyzer to work
+    @poem_text = simple_format(@poem.body)
+    @ta = Poetas::TextAnalyzer.new(@poem_text)
   end
 
   def create
