@@ -21,11 +21,12 @@ class Poetas::TextAnalyzer
   end
 
   def sentence_count
-    @poem_text.split(/\.|\?|\n|!/).length
+    #actual lines minus minus the whitespace lines in-between paragraphs
+    @poem_text.split(/\.|\?|\n|!/).length -  @poem_text.split(/\n\n/).length
   end
 
-  def paragraph_count  
-    @poem_text.split(/\n\n/).length 
+  def paragraph_count
+    @poem_text.split(/\n\n/).length
   end
 
   def words_per_sentence
@@ -41,6 +42,6 @@ class Poetas::TextAnalyzer
     all_words = @poem_text.scan(/\w+/)
     good_words = all_words.select{|word| !stopwords.include?(word)}
     ((good_words.length.to_f/all_words.length.to_f) * 100).to_i
-    
+
   end
 end

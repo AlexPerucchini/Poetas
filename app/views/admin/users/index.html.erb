@@ -1,18 +1,18 @@
-<% provide(:title, 'Admin. Users Console') %>
+<% provide(:title, 'Users Administration') %>
 
-<h1>Admin. Users Console</h1>
+<h1>Users Administration</h1>
 <div class="row">
   <div class="span12">
     <h3>Total Users (<%= @users.count %>) - Inactive Users (<%= @deleted_users.count %>) </h3>
-    <% @users.each do |user| %> 
+    <% @users.each do |user| %>
     <ul class="poets">
-      <span class="title"> <%= user.name %> 
+      <span class="title"> <%= user.name %>
         <% unless user == current_user %> |
           <span id="<%= dom_id(user) %>">
           <!-- deleted? is a permanent record method -->
           <% if user.deleted? %>
            <%= link_to('Activate', revive_admin_user_path(user),
-                    data: {confirm: "Activate account?"}) %>   
+                    data: {confirm: "Activate account?"}) %>
           <% else %>
             <%= link_to('Delete', admin_user_path(user),
                     method: :delete,
@@ -28,7 +28,7 @@
         Account last activity: <%= time_ago_in_words(user.updated_at) %> ago <br>
         Account deleted at: <%= user.deleted_at %> <br>
         Account last sign: <%=  user.last_sign_in_at %> <br>
-        User's IP: <%= user.current_sign_in_ip %> <br> 
+        User's IP: <%= user.current_sign_in_ip %> <br>
       </li>
      </ul>
     <% end %>

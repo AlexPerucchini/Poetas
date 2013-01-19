@@ -11,7 +11,7 @@ gem 'permanent_records', '2.3.0'
 gem 'faker',                           '1.0.1'
 
 group :production do
-  gem 'pg',         '0.12.2'
+  gem 'pg', '0.12.2'
 end
 
 group :assets do

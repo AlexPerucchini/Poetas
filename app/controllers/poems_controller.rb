@@ -14,7 +14,7 @@ class PoemsController < ApplicationController
 
   def show
     @poem = Poem.find(params[:id])
-    #need to use simple_format here fot the text_analyzer to work
+    #need to use simple_format here for the text_analyzer to work
     @poem_text = simple_format(@poem.body)
     @ta = Poetas::TextAnalyzer.new(@poem_text)
   end

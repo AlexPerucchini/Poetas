@@ -15,3 +15,18 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+
+ $('#text').hide(); //Initially form wil be hidden.
+
+  $('#show_btn').click(function() {
+   $('#text').show();//Form shows on button click
+   });
+
+    $('#hide_btn').click(function() {
+   $('#text').hide();//Form shows on button click
+   });
+
+ });
+
