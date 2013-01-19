@@ -2,7 +2,6 @@ class Poetas::TextAnalyzer
 
   def initialize(poem)
     @poem_text = poem
-    puts "Poem Analyzer..."
   end
 
   def character_count
