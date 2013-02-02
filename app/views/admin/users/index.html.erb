@@ -20,9 +20,9 @@
            <%= link_to('Activate', revive_admin_user_path(user),
                     data: {confirm: "Activate account?"}) %>
           <% else %>
-            <%= link_to('Delete', admin_user_path(user),
+            <%= link_to('De-activate', admin_user_path(user),
                     method: :delete,
-                    data: { confirm: "Delete Account?" }) %>
+                    data: { confirm: "De-activate Account?" }) %>
           <% end %>
           </span>
         <% end %>
