@@ -9,6 +9,7 @@ gem 'jquery-rails',               '2.1.4'
 gem 'kaminari',                     '0.14.1'
 gem 'permanent_records', '2.3.0'
 gem 'faker',                           '1.0.1'
+gem 'sunspot_rails',            '1.3.3'
 
 group :production do
   gem 'pg', '0.12.2'

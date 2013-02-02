@@ -456,10 +456,10 @@
 	"buffers":
 	[
 		{
-			"file": "lib/poetas/text_analyzer.rb",
+			"file": "app/views/poems/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 885,
+				"buffer_size": 944,
 				"line_ending": "Unix"
 			}
 		},
@@ -467,23 +467,7 @@
 			"file": "app/controllers/poems_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1151,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/poems/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 1260,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/helpers/poems_helper.rb",
-			"settings":
-			{
-				"buffer_size": 49,
+				"buffer_size": 1137,
 				"line_ending": "Unix"
 			}
 		}
@@ -552,11 +536,23 @@
 	},
 	"file_history":
 	[
+		"/Users/alexp/Documents/code/rails/poetas/app/views/admin/users/destroy.js.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/_text_analyzer.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/show.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/custom.css.scss",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/javascripts/application.js",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/javascripts/poems.js.coffee",
+		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/hide.js.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/application.css",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/admin/users/index.html.erb",
+		"/Users/alexp/Documents/code/rails/poetas/app/helpers/poems_helper.rb",
+		"/Users/alexp/Documents/code/rails/poetas/app/controllers/poems_controller.rb",
+		"/Users/alexp/Documents/code/rails/poetas/lib/poetas/text_analyzer.rb",
+		"/Users/alexp/Documents/code/rails/poetas/Gemfile",
+		"/Users/alexp/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/static_pages/home.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/spec/requests/poems_pages_spec.rb",
 		"/Users/alexp/Documents/code/rails/poetas/spec/spec_helper.rb",
-		"/Users/alexp/Documents/code/rails/poetas/Gemfile",
 		"/Users/alexp/Documents/code/rails/poetas/app/controllers/users_controller.rb",
 		"/Users/alexp/Documents/code/rails/poetas/spec/requests/authentication_pages_spec.rb",
 		"/Users/alexp/Documents/code/rails/poetas/spec/requests/user_pages_spec.rb",
@@ -570,10 +566,7 @@
 		"/Users/alexp/Documents/code/rails/poetas/app/views/static_pages/contact.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/config/locales/devise.en.yml",
 		"/Users/alexp/Documents/code/rails/poetas/app/models/user.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/show.html.erb",
-		"/Users/alexp/Documents/code/rails/poetas/app/helpers/poems_helper.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/users/profile.html.erb",
-		"/Users/alexp/Documents/code/rails/poetas/app/views/admin/users/destroy.js.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/admin/users/revive.js.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/controllers/admin/users_controller.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/controllers/admin_controller.rb",
@@ -588,10 +581,8 @@
 		"/Users/alexp/Documents/code/rails/poetas/app/helpers/users_helper.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/admin/users/deleated_users.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/users/destroy.js.erb",
-		"/Users/alexp/Documents/code/rails/poetas/app/assets/javascripts/application.js",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/_poem.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/lib/tasks/sample_data.rake",
-		"/Users/alexp/Documents/code/rails/poetas/app/controllers/poems_controller.rb",
 		"/Users/alexp/Documents/code/rails/poetas/db/migrate/20120930145554_devise_create_users.rb",
 		"/Users/alexp/Documents/code/rails/poetas/README",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/devise/registrations/new.html.erb",
@@ -600,7 +591,6 @@
 		"/Users/alexp/Documents/code/rails/poetas/app/views/poems/index.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/users/show.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/controllers/TODO.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/custom.css.scss",
 		"/Users/alexp/Documents/code/rails/poetas/app/mailers/.gitkeep",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/static_pages/profile.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/models/role.rb",
@@ -630,7 +620,6 @@
 		"/Users/alexp/Documents/code/rails/poetas/spec/requests/home_pages_spec.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/views/home/index.html.erb",
 		"/Users/alexp/Documents/code/rails/poetas/app/helpers/home_helper.rb",
-		"/Users/alexp/Documents/code/rails/poetas/app/assets/stylesheets/application.css",
 		"/Users/alexp/Documents/code/rails/poetas/public/robots.txt",
 		"/Users/alexp/Documents/code/rails/poetas/config/application.rb",
 		"/Users/alexp/Documents/code/rails/poetas/app/models/ability.rb",
@@ -674,12 +663,7 @@
 		"/Users/alexp/Documents/code/rails/sample_app/Gemfile",
 		"/Users/alexp/Documents/code/rails/sample_app/spec/requests/authentication_pages_spec.rb",
 		"/Users/alexp/Documents/code/rails/sample_app/app/views/users/_user.html.erb",
-		"/Users/alexp/Documents/code/rails/sample_app/spec/requests/users_pages_spec.rb",
-		"/Users/alexp/Documents/code/rails/sample_app/spec/factories.rb",
-		"/Users/alexp/Documents/code/rails/sample_app/db/migrate/20120922142100_add_admin_to_users.rb",
-		"/Users/alexp/Documents/code/rails/sample_app/app/views/users/index.html.erb",
-		"/Users/alexp/Documents/code/rails/sample_app/app/controllers/sessions_controller.rb",
-		"/Users/alexp/Documents/code/rails/sample_app/app/views/sessions/create.html.erb"
+		"/Users/alexp/Documents/code/rails/sample_app/spec/requests/users_pages_spec.rb"
 	],
 	"find":
 	{
@@ -697,6 +681,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".hide",
+			"hide",
+			".hide",
+			"hide",
+			"grayLight",
 			"\"",
 			"fadeIn",
 			")%>",
@@ -766,78 +755,23 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "lib/poetas/text_analyzer.rb",
-					"settings":
-					{
-						"buffer_size": 885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								72,
-								72
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/poems_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1151,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								390,
-								390
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/views/poems/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 1260,
+						"buffer_size": 944,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1226,
-								1226
+								697,
+								697
 							]
 						],
 						"settings":
@@ -853,24 +787,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/helpers/poems_helper.rb",
+					"buffer": 1,
+					"file": "app/controllers/poems_controller.rb",
 					"settings":
 					{
-						"buffer_size": 49,
+						"buffer_size": 1137,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36,
-								36
+								359,
+								359
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
