@@ -18,7 +18,7 @@
 db/*.sqlite3
 /log/*
 /tmp/*
-
+solr/*
 # various artifacts
 mojo.diff
 **.war

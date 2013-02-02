@@ -9,7 +9,7 @@
         <%= submit_tag "Search", :name => nil , class: "btn btn-primary"%>
       <% end %>
       </span>
-    <h3>Total Users (<%= @users.count %>) - Inactive Users (<%= @deleted_users.count %>) </h3>
+    <h3>Total Users (<%= @total_users%>) - Total Inactive Users (<%= @deleted_users.count %>) </h3>
     <% @users.each do |user| %>
     <ul class="poets">
       <span class="title"> <%= user.name %>
