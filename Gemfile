@@ -11,6 +11,7 @@ gem 'permanent_records', '2.3.0'
 gem 'faker',                           '1.0.1'
 gem 'sunspot_rails',            '1.3.3'
 
+
 group :production do
   gem 'pg', '0.12.2'
 end
@@ -31,6 +32,8 @@ group :development, :test do
   gem 'hub',                           '1.10.2'
   gem 'launchy',                    '2.1.2'
   gem 'annotate',                  '2.5.0'
+  gem 'sunspot_solr',          '1.3.3'
+  gem  'progress_bar',           '0.4.0'
 end
 
 

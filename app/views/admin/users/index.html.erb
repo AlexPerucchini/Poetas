@@ -3,6 +3,12 @@
 <h1>Users Administration</h1>
 <div class="row">
   <div class="span12">
+      <span >
+      <%= form_tag admin_users_path, :method => :get,  class: "form-search"  do %>
+        <%= text_field_tag :search, params[:search], class: "input-medium search-query" %>
+        <%= submit_tag "Search", :name => nil , class: "btn btn-primary"%>
+      <% end %>
+      </span>
     <h3>Total Users (<%= @users.count %>) - Inactive Users (<%= @deleted_users.count %>) </h3>
     <% @users.each do |user| %>
     <ul class="poets">

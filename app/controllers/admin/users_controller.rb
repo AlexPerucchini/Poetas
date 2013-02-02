@@ -1,8 +1,10 @@
 class Admin::UsersController < AdminController
-  
+
   def index
-    #@users = User.not_deleted(params[:page]).per(10) 
-    @users = User.all
+       @search = User.search do
+        fulltext params[:search]
+    end
+    @users = @search.results
     @deleted_users = User.deleted
     respond_with(@user)
   end

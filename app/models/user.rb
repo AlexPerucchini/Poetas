@@ -23,12 +23,12 @@ class User < ActiveRecord::Base
   rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable, :recoverable, 
+  # :lockable, :timeoutable and :omniauthable, :recoverable,
   devise :database_authenticatable, :registerable,
          :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible  :name, :email, :password, :password_confirmation, 
+  attr_accessible  :name, :email, :password, :password_confirmation,
                    :remember_me
   # attr_accessible :title, :body
 
@@ -39,9 +39,14 @@ class User < ActiveRecord::Base
 
   #default_scope order: 'users.name DESC'
 
-  #After authenticating a user and in each request, Devise checks if your model 
-  #is active by calling model.active_for_authentication?. This method is 
-  #overwriten by other devise modules. 
+  #solr search
+  searchable do
+    text :name
+  end
+
+  #After authenticating a user and in each request, Devise checks if your model
+  #is active by calling model.active_for_authentication?. This method is
+  #overwriten by other devise modules.
   def active_for_authentication?
     #the deleted? method is part of the permanent_record
     super && !deleted?
