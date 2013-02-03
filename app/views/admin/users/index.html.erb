@@ -3,13 +3,15 @@
 <h1>Users Administration</h1>
 <div class="row">
   <div class="span12">
-      <span >
+     <h3>Total Users (<%= @total_users%>) - Total Inactive Users (<%= @deleted_users.count %>) </h3>
+      <span  class="search">
       <%= form_tag admin_users_path, :method => :get,  class: "form-search"  do %>
         <%= text_field_tag :search, params[:search], class: "input-medium search-query" %>
         <%= submit_tag "Search", :name => nil , class: "btn btn-primary"%>
       <% end %>
+       Found <%= pluralize(@users.count, 'user') %> that mached that criteria
       </span>
-    <h3>Total Users (<%= @total_users%>) - Total Inactive Users (<%= @deleted_users.count %>) </h3>
+
     <% @users.each do |user| %>
     <ul class="poets">
       <span class="title"> <%= user.name %>

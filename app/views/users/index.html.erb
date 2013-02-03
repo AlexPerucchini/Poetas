@@ -2,8 +2,15 @@
 <h1>Poets</h1>
 <div class="row">
   <div class="span12">
+     <span  class="search">
+     <%= form_tag poets_path, :method => :get,  class: "form-search"  do %>
+       <%= text_field_tag :search, params[:search], class: "input-medium search-query" %>
+       <%= submit_tag "Search", :name => nil , class: "btn btn-primary"%>
+     <% end %>
+     Found <%= pluralize(@poets.count, 'poet') %> that mached that criteria
+    </span>
+    <%= paginate @poets%>
     <% if @poets.any? %>
-      <%= paginate @poets%>
       <ul class="poets">
         <% @poets.each do |poet| %>
         <li id="<%= dom_id(poet) %>">
