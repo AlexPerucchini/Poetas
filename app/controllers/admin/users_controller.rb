@@ -1,13 +1,8 @@
 class Admin::UsersController < AdminController
 
   def index
-      #we need to force solr to re-index if the a User was deleted or Activated
-    User.reindex
-    @search = User.search do
-      fulltext params[:search]
-    end
     @total_users = User.count
-    @users = @search.results
+    @users = User.all
     @deleted_users = User.deleted
 
   end

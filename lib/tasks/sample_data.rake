@@ -13,6 +13,7 @@ def make_users
                        password: "foobar",
                        password_confirmation: "foobar")
   admin.add_role :admin
+  puts "Admin Account and Admin role created"
   25.times do |n|
     name  = Faker::Name.name
     email = "user#{n+1}@test.com"
@@ -21,6 +22,7 @@ def make_users
                  email:    email,
                  password: password,
                  password_confirmation: password)
+    puts "user created #{name}"
   end
 end
 

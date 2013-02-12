@@ -37,14 +37,6 @@ class User < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true
 
-  #solr search
-  searchable do
-    text :name
-  end
-
-   #the default scope was added since solr search was returning all record in the database
-   #did not want to return deleted users in the search results
-   default_scope User.not_deleted
 
   #After authenticating a user and in each request, Devise checks if your model
   #is active by calling model.active_for_authentication?. This method is
