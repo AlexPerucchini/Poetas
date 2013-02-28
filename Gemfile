@@ -9,10 +9,8 @@ gem 'jquery-rails',           '2.1.4'
 gem 'kaminari',               '0.14.1'
 gem 'permanent_records',      '2.3.0'
 gem 'faker',                  '1.0.1'
+gem 'pg',                     '0.14.1'
 
-group :production do
-  gem 'pg', '0.12.2'
-end
 
 group :assets do
   gem 'sass-rails',     '3.2.6'
@@ -22,7 +20,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails',              '2.12.2'
-  gem 'sqlite3',                  '1.3.6'
   gem 'capybara',                 '1.1.2'
   gem 'email_spec',               '1.2.1'
   gem 'database_cleaner',         '0.9.1'
