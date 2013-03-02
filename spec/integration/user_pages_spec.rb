@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "User Pages" do
+feature "User Pages" do
 
   subject { page }
 
@@ -16,8 +16,8 @@ describe "User Pages" do
     let(:user) { FactoryGirl.create(:user) }
     let!(:p1) { FactoryGirl.create(:poem, user: user, title: "Poem 1", body: "Lorem...") }
 
-    before do 
-      sign_in(user) 
+    before do
+      sign_in(user)
       visit(poets_path)
     end
 
@@ -27,20 +27,20 @@ describe "User Pages" do
     it "should link to poets poem" do
       page.should have_link("Poems")
       click_link("Poems")
-      page.should have_selector('h1', content: "Poems by #{user.name}") 
-    end 
+      page.should have_selector('h1', content: "Poems by #{user.name}")
+    end
   end
-  
+
   describe "profile page for authenticated user" do
-    
+
     let(:user) { FactoryGirl.create(:user) }
 
-    before(:each) do 
+    before(:each) do
       visit(profile_path)
     end
 
     it { should have_selector('h1',     content: "#{user.name}'s Profile") }
     it { should have_selector('title',  content: "Poetas - Profile") }
-    it { should have_selector('li',     content: "#{user.email}")}  
+    it { should have_selector('li',     content: "#{user.email}")}
   end
 end
