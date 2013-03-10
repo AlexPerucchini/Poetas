@@ -30,17 +30,19 @@
             </ul>
           </li>
           <!-- admin -->
-           <li id="fat-menu" class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Admin <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Users", admin_users_path %></li>
-            </ul>
-          </li>
+            <% if admin_only %>
+             <li id="fat-menu" class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Admin <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Users", admin_users_path %></li>
+              </ul>
+            </li>
+          <% end %>
         <% else %>
           <li><%= link_to "Sign-in", signin_path %></li>
-      <% end %>  
+      <% end %>
       </ul>
     </nav>
   </div>
