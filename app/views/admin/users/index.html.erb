@@ -6,7 +6,7 @@
      <h3>Total Users (<%= @total_users%>) - Total Inactive Users (<%= @deleted_users.count %>) </h3>
       <span  class="search">
       <%= form_tag admin_users_path, :method => :get,  class: "form-search"  do %>
-        <%= text_field_tag :search, params[:search], class: "input-medium search-query" %>
+        <%= text_field_tag :query, params[:query], class: "input-medium search-query" %>
         <%= submit_tag "Search", :name => nil , class: "btn btn-primary"%>
       <% end %>
        Found <%= pluralize(@users.count, 'user') %> that mached that criteria

@@ -2,7 +2,7 @@ class Admin::UsersController < AdminController
 
   def index
     @total_users = User.count
-    @users = User.all
+    @users = User.text_search(params[:query]).order("name")
     @deleted_users = User.deleted
 
   end
