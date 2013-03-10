@@ -4,7 +4,8 @@
   <div class="span12">
      <span  class="search">
      <%= form_tag poets_path, :method => :get,  class: "form-search"  do %>
-       <%= text_field_tag :search, params[:search], class: "input-medium search-query" %>
+       <%= text_field_tag :query, params[:query],
+        class: "input-medium search-query" %>
        <%= submit_tag "Search", :name => nil , class: "btn btn-primary"%>
      <% end %>
      Found <%= pluralize(@poets.count, 'poet') %> that mached that criteria
@@ -17,7 +18,8 @@
           <span class="title"><%= poet.name %> </span><br>
           <span class="timestamp">
             <% unless poet.poems.empty? %>
-            Poems posted (<%= poet.poems.count %>) - <%= link_to('Poems', poet_poems_path(poet)) %><br>
+            Poems posted (<%= poet.poems.count %>) -
+              <%= link_to('Poems', poet_poems_path(poet)) %><br>
             <% end %>
             Member since <%= time_ago_in_words(poet.created_at) %> ago.
           </span>

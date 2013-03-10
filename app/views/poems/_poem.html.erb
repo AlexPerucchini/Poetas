@@ -6,12 +6,12 @@
     Created <%= time_ago_in_words(poem.created_at) %> ago. <br>
   </span>
   <span class="links">
-    <%= link_to('Show Poem', poem_path(poem)) %> 
+    <%= link_to('Show Poem', poem_path(poem)) %>
       <% if current_user.id == @poet.id %>
       | <%= link_to('Delete Poem', poem,
-      method: :delete,
-      data: { confirm: "Are you sure?"},
-      title: poem.title) %>
+                    method: :delete,
+                    data: { confirm: "Are you sure?"},
+                    title: poem.title) %>
       <% end %>
   </span>
 </li>

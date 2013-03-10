@@ -45,4 +45,13 @@ class User < ActiveRecord::Base
     #the deleted? method is part of the permanent_record
     super && !deleted?
   end
+
+  def self.text_search(query)
+    if query.present?
+      #using texticle ... gigle gigle
+      search(query)
+    else
+      scoped
+    end
+  end
 end

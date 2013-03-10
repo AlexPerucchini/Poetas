@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
 
   def index
-    @poets = User.not_deleted.page(params[:page]).per(10)
+    #gets all active poets and passes in a query sting for searching, then
+    #paginates
+    @poets = User.text_search(params[:query]).not_deleted.page(params[:page]).per(10)
   end
 
   def show

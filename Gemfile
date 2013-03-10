@@ -10,6 +10,7 @@ gem 'kaminari',               '0.14.1'
 gem 'permanent_records',      '2.3.0'
 gem 'faker',                  '1.0.1'
 gem 'pg',                     '0.14.1'
+gem 'texticle',               '2.0.0', :require => "texticle/rails"
 
 
 group :assets do

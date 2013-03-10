@@ -10,9 +10,9 @@
      <span class="links"> <%= link_to('My Poems', poems_path) %> |
       <%= link_to('Edit Poem', edit_poem_path(@poem)) %> |
       <%= link_to('Delete Poem', @poem,
-        method: :delete,
-        data: { confirm: "Are you sure?"},
-        title: @poem.title) %>
+                  method: :delete,
+                  data: { confirm: "Are you sure?"},
+                  title: @poem.title) %>
     </span>
     <% end %> <br>
     <button type="button" class="btn btn-primary btn-small" id="show_btn" data-toggle="button" >Show Analysis</button>
