@@ -1,6 +1,10 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
+    puts "Resetting existing data..."
+    Rake::Task['db:reset'].invoke
+    puts "Preparing the test databse..."
+    Rake::Task['db:test:prepare'].invoke
     make_users
     make_poems
     #make_relationships
@@ -31,8 +35,8 @@ def make_poems
   50.times do
     title = Faker::Lorem.sentence(1)
     body = Faker::Lorem.paragraphs(5)
-    users.each do |user| 
-      user.poems.create!(title: title, body: body) 
+    users.each do |user|
+      user.poems.create!(title: title, body: body)
     end
   end
 end
