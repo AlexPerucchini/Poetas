@@ -7,8 +7,8 @@
       <li><%= @ta.character_count_nospaces %> characters (no spaces)</li>
       <li><%= pluralize(@ta.sentence_count, 'sentence') %></li>
       <li><%= pluralize(@ta.paragraph_count, 'paragraph') %> </li>
-      <li><%= pluralize(@ta.words_per_sentence, 'word')  %> per sentence  average</li>
-      <li><%= pluralize(@ta.sentences_per_paragraph, 'sentence')  %> per paragraph </li>
+      <li><%= pluralize(@ta.words_per_sentence, 'word')  %> per sentence (average)</li>
+      <li><%= pluralize(@ta.sentences_per_paragraph, 'sentence')  %> per paragraph (average) </li>
       <li><%= @ta.no_fluff_percentage %>% fluff free </li>
     </ul>
   </span>

@@ -3,7 +3,7 @@ Poetas::Application.routes.draw do
   devise_for(:users)
 
   root(to: "static_pages#home")
- 
+
   resource(:admin, controller: 'admin')
 
   namespace(:admin) do
@@ -13,7 +13,7 @@ Poetas::Application.routes.draw do
       end
     end
   end
-  
+
   resources(:poems)
 
   resources(:poets, controller: "users") do
@@ -27,7 +27,7 @@ Poetas::Application.routes.draw do
   devise_scope(:user) do
     match('/signup', to: 'devise/registrations#new')
     match('/signin', to: 'devise/sessions#new')
-    match('/logout', to: 'devise/sessions#destroy') 
+    match('/logout', to: 'devise/sessions#destroy')
   end
 
 end
