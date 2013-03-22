@@ -170,3 +170,8 @@ input, textarea, select, .uneditable-input {
 .timestamp, .author , .analyzer{
   color: $grayLight;
 }
+
+.gravatar {
+  float: left;
+  padding: 15px;
+}

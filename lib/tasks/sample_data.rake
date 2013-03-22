@@ -3,11 +3,10 @@ namespace :db do
   task populate: :environment do
     puts "Resetting existing data..."
     Rake::Task['db:reset'].invoke
-    puts "Preparing the test databse..."
-    Rake::Task['db:test:prepare'].invoke
     make_users
     make_poems
-    #make_relationships
+    puts "Preparing the test databse..."
+    Rake::Task['db:test:prepare'].invoke
   end
 end
 

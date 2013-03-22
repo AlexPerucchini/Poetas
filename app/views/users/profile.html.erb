@@ -3,6 +3,7 @@
 <div class="row">
   <div class="span6  offset3">
     <ul class="poets">
+       <%= gravatar_for(@poet) %>
       <li><b>Email</b> - <%= @poet.email %><br>
           <b>Member since</b> - <%= time_ago_in_words(@poet.created_at) %> ago<br>
           <b>Last activity</b> - <%= time_ago_in_words(@poet.last_sign_in_at) %> ago<br>
