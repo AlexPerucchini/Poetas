@@ -16,7 +16,8 @@
                   title: @poem.title) %>
       </span>
     <% end %>
-    <% if current_user.id && !current_user.voted_for?(@poem) %>
+    <% #cannot vote for your  %>
+    <% if !current_user.voted_for?(@poem) && current_user %>
       <span class="links">
         <%= link_to("Do you like it?", vote_poem_path(@poem, type: "vote"), method: :post) %>
       </span>

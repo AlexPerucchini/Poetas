@@ -60,7 +60,6 @@ class PoemsController < ApplicationController
     redirect_to :back, notice: "Thank you for voting!!"
   end
 
-
   private
 
 end
