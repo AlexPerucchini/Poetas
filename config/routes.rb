@@ -14,7 +14,9 @@ Poetas::Application.routes.draw do
     end
   end
 
-  resources(:poems)
+  resources(:poems) do
+    member { post :vote }
+  end
 
   resources(:poets, controller: "users") do
     resources :poems

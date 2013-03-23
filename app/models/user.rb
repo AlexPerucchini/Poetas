@@ -30,17 +30,14 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible  :name, :email, :password, :password_confirmation,
                    :remember_me
-  # attr_accessible :title, :body
-
   has_many :poems, dependent: :destroy
-
   validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true
 
 
   #After authenticating a user and in each request, Devise checks if your model
   #is active by calling model.active_for_authentication?. This method is
-  #overwriten by other devise modules.
+  #overwritten by other devise modules.
   def active_for_authentication?
     #the deleted? method is part of the permanent_record
     super && !deleted?
@@ -53,5 +50,11 @@ class User < ActiveRecord::Base
     else
       scoped
     end
+  end
+
+  #need to keep track of voting
+  has_many :evaluations, class_name: "ReputationSystem::Evaluation", as: :source
+  def voted_for?(poem)
+    evaluations.where(target_type: poem.class, target_id: poem.id).present?
   end
 end

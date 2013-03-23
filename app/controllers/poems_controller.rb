@@ -6,6 +6,7 @@ class PoemsController < ApplicationController
   def index
     @poet = params[:poet_id] ? User.find(params[:poet_id]) : current_user
     @poems = @poet.poems.page(params[:page]).per(10)
+    @votes = @poems.find_with_reputation(:votes, :all, order: 'votes desc')
   end
 
   def new
@@ -50,6 +51,15 @@ class PoemsController < ApplicationController
     @poem.destroy
     redirect_to(poems_url)
   end
+
+  #voting on poems
+  def vote
+    value = params[:type] == 'vote' ? 1 : 0;
+    @poem = Poem.find(params[:id])
+    @poem.add_or_update_evaluation(:votes, value, current_user)
+    redirect_to :back, notice: "Thank you for voting!!"
+  end
+
 
   private
 

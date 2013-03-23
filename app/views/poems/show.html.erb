@@ -4,20 +4,29 @@
   <div class="span8">
     <span class="body"><%= simple_format(@poem.body) %></span>
     <span class="timestamp">
-     Created by <%= @poem.user.name %>, <%= time_ago_in_words(@poem.created_at) %> ago.
+     Created by <%= @poem.user.name %>, <%= time_ago_in_words(@poem.created_at) %> ago. Likes? (<%= pluralize(@poem.reputation_for(:votes).to_i, "vote") %>)
     </span>
     <% if current_user.id == @poem.user.id %>
-     <span class="links"> <%= link_to('My Poems', poems_path) %> |
+     <span class="links">
+      <%= link_to('My Poems', poems_path) %> |
       <%= link_to('Edit Poem', edit_poem_path(@poem)) %> |
       <%= link_to('Delete Poem', @poem,
                   method: :delete,
                   data: { confirm: "Are you sure?"},
                   title: @poem.title) %>
-    </span>
-    <% end %> <br>
-    <button type="button" class="btn btn-primary btn-small" id="show_btn" data-toggle="button" >Show Analysis</button>
-    <button type="button" class="btn btn-primary btn-small" id="hide_btn" data-toggle="button" >Hide Analysis</button>
-     <span id="text"><%=  render('text_analyzer') %></span>
+      </span>
+    <% end %>
+    <% if current_user.id && !current_user.voted_for?(@poem) %>
+      <span class="links">
+        <%= link_to("Do you like it?", vote_poem_path(@poem, type: "vote"), method: :post) %>
+      </span>
+    <% end %>
+    <br><br>
+    <button type="button" class="btn btn-primary btn-small" id="show_btn"
+      data-toggle="button" >Show Analysis</button>
+    <button type="button" class="btn btn-primary btn-small" id="hide_btn"
+      data-toggle="button" >Hide Analysis</button>
+    <span id="text"><%=  render('text_analyzer') %></span>
   </div>
 </div>
 
