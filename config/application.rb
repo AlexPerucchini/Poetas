@@ -68,6 +68,6 @@ module Poetas
     config.assets.version = '1.0'
 
     # Needed for heroku to work
-    onfig.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = false
   end
 end
