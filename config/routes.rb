@@ -1,4 +1,5 @@
 Poetas::Application.routes.draw do
+
   #devise_for must be the first route for Heroku prod
   devise_for(:users)
 

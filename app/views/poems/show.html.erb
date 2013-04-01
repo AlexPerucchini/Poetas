@@ -4,7 +4,7 @@
   <div class="span8">
     <span class="body"><%= simple_format(@poem.body) %></span>
     <span class="timestamp">
-     Created by <%= @poem.user.name %>, <%= time_ago_in_words(@poem.created_at) %> ago. Likes? (<%= pluralize(@poem.reputation_for(:votes).to_i, "vote") %>)
+     Created by <%= @poem.user.name %>, <%= time_ago_in_words(@poem.created_at) %> ago. Likes (<%= pluralize(@poem.reputation_for(:votes).to_i, "vote") %>)
     </span>
     <% if current_user.id == @poem.user.id %>
      <span class="links">
@@ -16,10 +16,9 @@
                   title: @poem.title) %>
       </span>
     <% end %>
-    <% #cannot vote for your  %>
     <% if !current_user.voted_for?(@poem) && current_user %>
       <span class="links">
-        <%= link_to("Do you like it?", vote_poem_path(@poem, type: "vote"), method: :post) %>
+        Like the poem? <%= link_to("yes", vote_poem_path(@poem, type: "vote"), method: :post) %>
       </span>
     <% end %>
     <br><br>
