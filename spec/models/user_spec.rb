@@ -22,7 +22,7 @@
 require 'spec_helper'
 
 describe User do
-  
+
   before { @user = User.new(name: "Example User", email: "TestUser@test.com",
                             password: "foobar", password_confirmation: "foobar",
                             remember_me: false) }
@@ -62,11 +62,11 @@ describe User do
   describe "poems associations" do
 
     before { @user.save }
-    
-    let!(:older_poem) do 
+
+    let!(:older_poem) do
       FactoryGirl.create(:poem, user: @user, created_at: 1.day.ago)
     end
-    
+
     let!(:newer_poem) do
       FactoryGirl.create(:poem, user: @user, created_at: 1.hour.ago)
     end
@@ -75,12 +75,13 @@ describe User do
       @user.poems.should == [newer_poem, older_poem]
     end
 
-    it "should destroy associated poems" do
+    it "should not destroy associated poems" do
+      #the user is logically (permanent record) deleted not physically deleted from the db
       poems = @user.poems.dup
       @user.destroy
       poems.should_not be_empty
       poems.each do |poem|
-        Poem.find_by_id(poem.id).should be_nil
+        Poem.find_by_id(poem.id).should_not be_nil
       end
     end
   end

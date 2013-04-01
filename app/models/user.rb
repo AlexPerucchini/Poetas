@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
 
   def self.text_search(query)
     if query.present?
-      #using texticle ... gigle gigle
+      #using texticle
       search(query)
     else
       scoped
