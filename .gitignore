@@ -77,3 +77,6 @@ poetas.sublime-workspace
 
 # vim artifacts
 **.swp
+
+# RVM .rvmrc config
+.rvmrc

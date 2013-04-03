@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',                          '3.2.11'
+gem 'rails',                          '3.2.13'
 gem 'bootstrap-sass',                 '2.0.4'
 gem 'devise',                         '2.1.2'
 gem 'cancan',                         '1.6.8'
@@ -19,7 +19,17 @@ group :assets do
   gem 'uglifier',                     '1.3.0'
 end
 
+
+group :cucumber do
+  gem 'cucumber-rails'
+  gem 'cucumber' # , '0.7.3'
+  # gem 'spork'
+end
+
 group :development, :test do
+  gem 'sqlite3'
+  gem 'thin',                          '1.5.0'
+  gem 'mysql2',                        '0.3.11'
   gem 'rspec-rails',                   '2.12.2'
   gem 'capybara',                      '1.1.2'
   gem 'email_spec',                    '1.2.1'
@@ -29,6 +39,10 @@ group :development, :test do
   gem 'launchy',                       '2.1.2'
   gem 'annotate',                      '2.5.0'
   gem 'faker',                         '1.0.1'
+  gem 'pry',                           '0.9.12'
+  gem 'pry-doc',                       '0.4.4'
+  gem 'pry-rails',                     '0.2.2'
+  gem 'pry-remote',                    '0.1.7'
+  gem 'pry-debugger',                  '0.2.1'
+  gem 'pry-stack_explorer',            '0.4.9'
 end
-
-

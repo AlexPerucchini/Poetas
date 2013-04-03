@@ -1,0 +1,44 @@
+Some helpful Cucumber URLs
+--------------------------
+
+A great rails starting point. Includes some good devise-based features/steps:
+https://github.com/RailsApps/rails3-devise-rspec-cucumber
+
+A simple Rails Blog app with Rspec and Cucumber:
+http://oembot.tumblr.com/post/2346069125/bdd-of-a-simple-rails-app-with-cucumber-and-rspec
+
+AsciiCast on getting started with Cucumber:
+http://asciicasts.com/episodes/155-beginning-with-cucumber
+
+Cucumber Main Site: http://cukes.info/
+
+Good general outside-in testing blog post:
+http://rubylearning.com/blog/2010/10/05/outside-in-development/
+
+Practical Cucumber from CollectiveIdea (4-part series):
+http://collectiveidea.com/blog/archives/2010/09/07/practical-cucumber/
+
+Some great practical tips on Cucumber:
+http://eggsonbread.com/2010/09/06/my-cucumber-best-practices-and-tips/
+
+The Secret Ninja Cucumber Scrolls (fun way to learn Cucumber):
+http://cuke4ninja.com/
+
+If you use Sublime Text 2, try this:
+https://makandracards.com/ninjaconcept/9233-how-to-use-cucumber-together-with-sublime-text-2-editor
+
+Keeping your scenarios focused on behavior not implementation:
+http://www.elabs.se/blog/15-you-re-cuking-it-wrong
+
+Imperative vs. Declarative Style:
+http://benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories.html
+
+Using Scenario Outlines:
+https://github.com/cucumber/cucumber/wiki/Scenario-Outlines
+
+And just because, a blog post on why we should all avoid using Cucumber:
+http://www.jackkinsella.ie/2011/09/26/why-bother-with-cucumber-testing.html
+
+
+
+
