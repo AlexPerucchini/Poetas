@@ -1,7 +1,13 @@
 Poetas::Application.routes.draw do
 
   #devise_for must be the first route for Heroku prod
-  devise_for(:users)
+  # rescue on migrate:
+  # http://code-n-fold.com/2012/04/21/rails-3-1-devise_for-breaks-dbmigrate-fix-6/
+  begin
+    devise_for(:users)
+  rescue Exception => e
+    puts "Devise error: #{e.class}: #{e}"
+  end
 
   root(to: "static_pages#home")
 
