@@ -5,6 +5,3 @@ http://poetas.herokuapp.com/
 Rails application will act as a community website for poetry, and short stories. A user will be able to upload, follow and unfollow other users (Twitter Style), viewed stats (like/dislike) It will also have a forum for disucssion.
 
 This is not a "commercial" application but a way to explore and learn Ruby on Rails
-
-Author:
-alessandorp65-at-msn-dot-com
